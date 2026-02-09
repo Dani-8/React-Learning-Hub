@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Project Structure</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="setup.css">
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="nav ">
+        <div class="flex items-center gap-2">
+            <div class="icon-cont">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"></path>
+                </svg>
+            </div>
+            <h1 class="text-xl font-extrabold">React Anatomy</h1>
+        </div>
+        <div class="flex gap-4">
+            <a href="#setup" class="text-xs font-bold text-indigo-600 hover:underline">1. Start Here</a>
+            <a href="#structure" class="text-xs font-bold text-slate-500 hover:underline">2. Folders</a>
+        </div>
+    </nav>
+
+
+    <!-- MAIN CONTENT -->
+
+    <main class="p-10">
+
+        <!-- SECTION-1: THE STARTING POINT -->
+        <section id="setup" class="first-section bg-indigo-50">
+            <header class="text-center">
+                <div class="tag-title">Phase 01: Ignition</div>
+                <h2 class="text-4xl font-bold italic mb-2">How to Create the App</h2>
+                <p class="text-slate-500 text-m">Run these commands in your terminal to generate the folders below.</p>
+            </header>
+
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="cmd-card shadow-xl">
+                    <h3 class="mb-2 flex items-center gap-2 font-bold text-sm text-white">
+                        <span class="bg-indigo-500 rounded flex items-center justify-center w-5 h-5 text-[10px]">1</span>
+                        Initialize
+                    </h3>
+                    <code class="command-line text-indigo-300">npm create vite@latest my-app</code>
+                    <p class="mt-1 text-[10px] text-slate-400 italic">Select <b>"React"</b> and then <b>"JavaScript"</b> or <b>"TypeScript"</b>.</p>
+                </div>
+                <div class="cmd-card shadow-xl">
+                    <h3 class="mb-2 flex items-center gap-2 font-bold text-sm text-white">
+                        <span class="bg-pink-500 rounded flex items-center justify-center w-5 h-5 text-[10px]">2</span>
+                        Install
+                    </h3>
+                    <code class="command-line text-pink-300">cd my-app</code>
+                    <code class="command-line text-pink-300">npm install</code>
+                    <p class="mt-1 text-[10px] text-slate-400 italic">This creates the <b>node_modules</b> folder.</p>
+                </div>
+                <div class="cmd-card shadow-xl">
+                    <h3 class="mb-2 flex items-center gap-2 font-bold text-sm text-white">
+                        <span class="bg-emerald-500 rounded flex items-center justify-center w-5 h-5 text-[10px]">3</span>
+                        Launch
+                    </h3>
+                    <code class="command-line text-emerald-300">npm run dev</code>
+                    <p class="mt-1 text-[10px] text-slate-400 italic">Your app is now live at <b><u>http://localhost:5173</u></b></p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- SECTION-2: FOLDER STRUCTURE -->
+        <section id="structure" class="second-section bg-indigo-100">
+
+            
+
+
+
+
+        </section>
+
+
+    </main>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

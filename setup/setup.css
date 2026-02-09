@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Plus+Jakarta+Sans:wght@400;600;800&display=swap');
+body{
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    scroll-behavior: smooth;
+    background-color: rgb(246, 249, 252);
+}
+/* ================================================ */
+/* ================================================ */
+
+/* NAVBAR */
+/* NAVBAR */
+.nav{
+    padding: 15px 30px;
+    background-color: rgb(255, 255, 255);
+    border-bottom: 1px solid rgba(0,0,0,0.15);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav .icon-cont{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #4a4ddd;
+    padding: 8px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.22);
+}
+.nav .icon-cont svg{
+    height: 25px;
+    width: 25px;
+    color: white;
+}
+
+
+/* MAIN CONTENT */
+/* MAIN CONTENT */
+/* MAIN CONTENT */
+
+main{
+    max-width: 1100px;
+    margin: auto;
+}
+
+.first-section .tag-title{
+    padding: 3px 15px;
+    margin-bottom: 20px;
+    background-color: rgba(39, 35, 246, 0.1);
+    display: inline-block;
+    border-radius: 5000px;
+    color: #381ff1;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+
+
+code{
+    font-family: 'Fira Code', monospace;
+}
+
+.cmd-card{
+    background-color: #23293a;
+    color: white;
+    padding: 25px;
+    border-radius: 20px;
+    margin-top: 40px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: 0.3s ease;
+}
+.folder-card{
+    transition: 0.3s ease;
+}
+
+.folder-card:hover{
+    transform: translateX(8px);
+}
+
+.file-dot{
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 8px;
+}
+
+.command-line{
+    font-size: 12px;
+}
+.command-line::before{
+    content: "$ ";
+    color: #6366f1;
+    font-weight: bold;
+}
