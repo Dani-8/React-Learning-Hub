@@ -31,9 +31,9 @@
     <main class="p-10">
 
         <!-- SECTION-1: THE STARTING POINT -->
-        <section id="setup" class="first-section bg-indigo-50">
+        <section id="setup" class="first-section">
             <header class="text-center">
-                <div class="tag-title">Phase 01: Ignition</div>
+                <div class="tag-title tag-title1">Phase 01: Ignition</div>
                 <h2 class="text-4xl font-bold italic mb-2">How to Create the App</h2>
                 <p class="text-slate-500 text-m">Run these commands in your terminal to generate the folders below.</p>
             </header>
@@ -70,13 +70,155 @@
 
 
         <!-- SECTION-2: FOLDER STRUCTURE -->
-        <section id="structure" class="second-section bg-indigo-100">
+        <section id="structure" class="second-section mt-20">
+            <header class="text-center">
+                <div class="tag-title tag-title2">Phase 02: Exploration</div>
+                <h2 class="text-4xl font-bold italic mb-2 uppercase">"What do these files do?"</h2>
+            </header>
 
-            
+
+            <div class="my-16 grid grid-cols-1 lg:grid-cols-2 gap-12">
+
+                <!-- LEFT COLUMN: -->
+                <div class="space-y-8">
+                    <h2 class="mb-8 text-sm font-bold text-slate-400 uppercase tracking-widest">The Brain of the Project (Root Files)</h2>
+
+                    <div class="folder-card">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="file-dot bg-amber-500"></span>
+                            <h2 class="text-lg font-bold">node_modules/</h2>
+                        </div>
+                        <p class="text-sm text-slate-500 mb-2 leading-relaxed">
+                            The massive library warehouse. It contains the actual code for React and every other package you download.
+                        </p>
+                        <div class="bg-amber-50 border-l-4 border-amber-400 p-3 text-xs text-amber-800 rounded">
+                            <b>Rule #1:</b> NEVER edit anything in here. It's managed by <code class="font-bold">npm</code> and any changes will be overwritten automatically.
+                        </div>
+                    </div>
+
+
+                    <div class="folder-card">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="file-dot bg-sky-500"></span>
+                            <h2 class="text-lg font-bold italic">package.json</h2>
+                        </div>
+                        <p class="text-sm text-slate-500 mb-2 leading-relaxed">
+                            The <b>ID Card</b> of your project. It lists your <b>dependencies</b> (libraries your project needs) and <b>scripts</b> (commands like <code class="text-indigo-500 font-bold">npm run dev</code>).
+                        </p>
+                    </div>
+
+
+                    <div class="folder-card">
+                        <div class="flex items-center gap-2 mb-4">
+                            <span class="file-dot bg-slate-500"></span>
+                            <h2 class="text-lg font-bold">.gitignore</h2>
+                        </div>
+
+                        <p class="text-sm text-slate-500 mb-2 leading-relaxed mb-4">
+                            A list for Git. It tells your project which files or folders to <b>ignore</b> when uploading to GitHub. 
+                            For example, <code class="text-amber-500 font-bold">node_modules/</code> is huge, so you should never push it.
+                        </p>
+
+                        <div class="bg-slate-800 p-4 rounded-xl text-white text-[10px] mb-4">
+                            <p class="mb-2 font-bold text-[11px] text-amber-300">Common Entries & Their Purpose:</p>
+                            <p class="mb-2"><code class="text-teal-400 text-[11px]">node_modules/</code> – All the packages your project uses. Too big to push; Git can re-install them from <code>package.json</code>.</p>
+                            <p class="mb-2"><code class="text-teal-400 text-[11px]">dist/</code> – Compiled or built files. Usually generated automatically, no need to track.</p>
+                            <p class="mb-2"><code class="text-teal-400 text-[11px]">.env</code> – Stores secrets like API keys. Never push to GitHub!</p>
+                            <p class="mb-0"><code class="text-teal-400 text-[11px]">*.log</code> – Log files generated while running the project. Not needed in Git.</p>
+                        </div>
+
+                        <p class="text-[11px] text-slate-500">
+                            <span class="font-bold text-[12px] text-amber-500">Tip:</span> Add these before your first Git commit to avoid uploading unnecessary or sensitive files.
+                        </p>
+                    </div>
+
+
+                </div>
+
+
+                <!-- RIGHT COLUMN: -->
+                <div class="space-y-8">
+                    <h2 class="mb-8 text-sm font-bold text-slate-400 uppercase tracking-widest">What the Browser Sees (src & public)</h2>
+
+                    <div class="folder-card">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="file-dot bg-emerald-500"></span>
+                            <h2 class="text-lg font-bold">public/</h2>
+                        </div>
+                        <p class="text-sm text-slate-500 mb-2 leading-relaxed">Contains static files that the browser can access directly. This includes images, icons, and other assets like the favicon.</p>
+                        <div class="p-3 bg-emerald-50 rounded-lg border border-emerald-200">
+                            <p class="text-[10px] font-bold text-emerald-700 uppercase mb-1">Critical File:</p>
+                            <p class="text-xs text-emerald-800 font-bold italic underline text-center">index.html</p>
+                            <p class="text-[11px] text-emerald-600 mt-1 italic text-center">The skeleton of your app. React injects your components here, making the page interactive.</p>
+                        </div>
+                    </div>
+
+
+                    <div class="folder-card bg-slate-900 p-6 rounded-2xl text-white ">
+                        <h3 class="text-[15px] font-bold text-white">The Execution Flow <span class="ml-1 text-[11px]">(You Must Understand This)</span></h3>
+
+                            <p class="text-[10px] bg-slate-800 p-4 rounded-lg mt-1 leading-relaxed">
+                                1. The browser loads <code class="text-emerald-300 font-bold">index.html</code> from the <b>public</b> folder.
+                                <br><br>
+
+                                2. <code class="text-emerald-300 font-bold">index.html</code> contains a root <code class="text-pink-300 font-bold">&lt;div&gt;</code> where React will render the app.
+                                <br><br>
+
+                                3. <code class="text-indigo-300 font-bold">main.jsx</code> runs and creates the React root using that <code class="text-pink-300 font-bold">&lt;div&gt;</code>.
+                                <br><br>
+
+                                4. Inside <code class="text-indigo-300 font-bold">main.jsx</code>, <span class="text-sky-300">App.jsx</span> is imported.
+                                <br><br>
+
+                                5. <code class="text-indigo-300 font-bold">main.jsx</code> renders the <code class="text-sky-300 font-bold">&lt;App /&gt;</code> component into the root.
+                                <br><br>
+
+                                6. <span class="text-sky-300">App.jsx</span> executes and renders all child components.
+                                <br><br>
+
+                                7. The React app is now live and interactive in the browser!
+                            </p>
+                    </div>
+
+
+                    <div class="folder-card bg-indigo-600 text-white p-6 rounded-2xl">
+                        <div class="mb-4 flex items-center gap-2">
+                            <span class="file-dot bg-white"></span>
+                            <h2 class="text-lg font-bold">src/</h2>
+                        </div>
+
+                        <p class="mb-4 text-sm text-slate-200">
+                            This is your <b>home</b>. 99% of your work happens here. It's where you write your React components and structure your app.
+                        </p>
+
+                        <div class="bg-indigo-500/30 p-4 rounded-xl text-xs space-y-3">
+                            <p class="p-2 bg-indigo-500/50 rounded-lg">
+                                <b>main.jsx:</b> The entry point of your app. It connects React to the HTML root element and starts the rendering process.
+                            </p>
+                            <p class="p-2 bg-indigo-500/50 rounded-lg">
+                                <b>App.jsx:</b> The main component that wraps your entire site. You can think of it as the “parent” that renders all your other components inside it.
+                            </p>
+                            <p class="p-2 bg-indigo-500/50 rounded-lg">
+                                <b>assets/:</b> A folder for static files like images, logos, and icons. You can import these into your components to display them on the site.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
 
 
 
-
+        <!-- FOOTER -->
+        <section class="footer">
+            <div class="w-20 h-20 bg-indigo-50 rounded-full flex items-center justify-center ">
+                <span class="text-3xl"><i class="text-indigo-400 h-8 w-8" data-lucide="lightbulb"></i></span>
+            </div>
+            <div>
+                <h3 class="font-bold text-xl mb-1 italic">Pro-Tip for Beginners</h3>
+                <p class="text-slate-500 text-sm leading-relaxed">Once you launch with <code class="text-indigo-600 font-bold">npm run dev</code>, keep the terminal open. It will show you errors if your code breaks!</p>
+            </div>
         </section>
 
 
@@ -85,10 +227,10 @@
 
 
 
-
-
-
-
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+    </script>
 
 </body>
 </html>

@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Plus+Jakarta+Sans:wght@400;600;800&display=swap');
-body{
+html, body{
     font-family: 'Plus Jakarta Sans', sans-serif;
     scroll-behavior: smooth;
     background-color: rgb(246, 249, 252);
@@ -10,8 +10,12 @@ body{
 /* NAVBAR */
 /* NAVBAR */
 .nav{
+    position: sticky;
+    top: 0;
+
     padding: 15px 30px;
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(0,0,0,0.15);
 
     display: flex;
@@ -44,7 +48,7 @@ main{
     margin: auto;
 }
 
-.first-section .tag-title{
+.tag-title{
     padding: 3px 15px;
     margin-bottom: 20px;
     background-color: rgba(39, 35, 246, 0.1);
@@ -55,6 +59,14 @@ main{
     font-weight: 700;
     letter-spacing: 1px;
     text-transform: uppercase;
+}
+.tag-title1{
+    background-color: rgba(39, 35, 246, 0.1);
+    color: #381ff1;
+}
+.tag-title2{
+    background-color: rgba(61, 73, 94, 0.1);
+    color: #3e4e6e;
 }
 
 
@@ -76,9 +88,18 @@ code{
     transition: 0.3s ease;
 }
 .folder-card{
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    padding: 25px;
+    border-radius: 20px;
+    margin-top: 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     transition: 0.3s ease;
 }
-
 .folder-card:hover{
     transform: translateX(8px);
 }
@@ -98,4 +119,22 @@ code{
     content: "$ ";
     color: #6366f1;
     font-weight: bold;
+}
+
+
+
+
+
+.footer{
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    padding: 25px;
+    border-radius: 20px;
+    margin-top: 20px;
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: 0.3s ease;
 }
