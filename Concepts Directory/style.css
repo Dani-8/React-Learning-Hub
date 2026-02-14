@@ -19,9 +19,16 @@ body {
     transition: all 0.3s ease;
     border: 1px solid rgba(255, 255, 255, 0.05);
 }
-
 .topic-card:hover {
     border-color: #6366f1;
     background: rgba(99, 102, 241, 0.05);
     transform: scale(1.02);
+}
+.topic-card:not(.disabled):active{
+    transform: scale(0.9);
+}
+.disabled{
+    opacity: 0.4;
+    cursor: not-allowed;
+
 }

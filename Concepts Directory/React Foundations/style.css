@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Plus+Jakarta+Sans:wght@400;600;800&display=swap');
+
+html,body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    scroll-behavior: smooth;
+}
+/* ================================================== */
+/* ================================================== */
+/* ================================================== */
+
+
+code, pre {
+    font-family: 'Fira Code', monospace;
+}
+
+.glass {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.topic-card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.confusion-box {
+    display: none;
+}
+
+.confusion-toggle:checked~.confusion-box {
+    display: block;
+}
+
+.nav-link.active {
+    background: white;
+    color: #0ea5e9;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.render-step:hover .step-line {
+    width: 100%;
+}

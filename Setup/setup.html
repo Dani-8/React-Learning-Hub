@@ -11,13 +11,25 @@
 <body>
     <!-- NAVBAR -->
     <nav class="nav ">
-        <div class="flex items-center gap-2">
-            <div class="icon-cont">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"></path>
-                </svg>
+        <div class="flex items-center gap-4">
+            <a href="../index.html" class="group flex items-center gap-2 text-slate-400 hover:text-indigo-600 transition-colors">
+                <div class="w-8 h-8 rounded-full border border-slate-200 flex items-center justify-center group-hover:border-indigo-200 group-hover:bg-indigo-50">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+                </div>
+                <span class="text-[10px] font-black uppercase tracking-widest">Back</span>
+            </a>
+            
+            <!-- Vertical Separator Line -->
+            <div class="h-6 w-[1px] bg-slate-300"></div>
+
+            <div class="flex items-center gap-2">
+                <div class="icon-cont bg-gradient-to-tr from-indigo-400 to-indigo-600">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"></path>
+                    </svg>
+                </div>
+                <h1 class="text-xl font-extrabold">React Anatomy</h1>
             </div>
-            <h1 class="text-xl font-extrabold">React Anatomy</h1>
         </div>
         <div class="flex gap-4">
             <a href="#setup" class="text-xs font-bold text-indigo-600 hover:underline">1. Start Here</a>
