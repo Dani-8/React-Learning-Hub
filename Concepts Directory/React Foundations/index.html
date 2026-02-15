@@ -1,34 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>React Fundamentals</title>
-    
+    <title>React Fundamentals Guide</title>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body class="bg-[#f8fafc] text-slate-900 leading-relaxed">
 
     <!-- NAVBAR -->
     <nav class="sticky glass px-6 py-4 flex justify-between items-center">
-        <div class="flex ">
-            <div class="w-10 h-10 bg-gradient-to-br from-sky-500 to-indigo-600 rounded-xl flex items-center justify-center text-white shadow-lg shadow-sky-200">
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-            </div>
-            <div class="flex flex-col">
-                <h2 class="text-lg font-bold">React Fundamentals</h2>
-                <p class="text-xs">The Foundations</p>
+        <div class="flex items-center gap-3">
+            <!-- Back Button -->
+            <a href="../index.html"
+                class="group flex items-center gap-2 text-slate-400 hover:text-indigo-600 transition-colors">
+                <div
+                    class="w-8 h-8 rounded-full border border-slate-200 flex items-center justify-center group-hover:border-indigo-200 group-hover:bg-indigo-50">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                    </svg>
+                </div>
+                <span class="text-[10px] font-black uppercase tracking-widest">Back</span>
+            </a>
+
+            <!-- Vertical Separator Line -->
+            <div class="h-6 w-[1px] bg-slate-200"></div>
+
+            <!-- Logo -->
+            <div class="flex items-center gap-3">
+                <div
+                    class="w-10 h-10 bg-gradient-to-br from-sky-500 to-indigo-600 rounded-xl flex items-center justify-center text-white shadow-lg shadow-sky-200">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                    </svg>
+                </div>
+                <div class="flex flex-col">
+                    <h2 class="text-lg font-bold">React Fundamentals</h2>
+                    <p class="text-[10px] uppercase font-bold text-indigo-500 tracking-widest">The Foundations</p>
+                </div>
             </div>
         </div>
-        <div class="">
 
+
+        <div class="hidden lg:flex items-center gap-6">
+            <div class="h-8 w-[1px] bg-slate-200"></div>
+            <span class="text-xs font-semibold text-slate-500 italic">"Focus on the 'Why', not just the 'How'"</span>
         </div>
     </nav>
 
 
 
 
-    
+    <div class="w-full px-6 py-12 flex gap-12">
+        <!-- SIDEBAR -->
+        <aside class="w-72 shrink-0 hidden lg:block">
+            <div class="sticky top-28 space-y-8">
+                <div>
+                    <h3 class="text-[11px] font-black text-slate-400 uppercase tracking-widest mb-4">Core Concepts</h3>
+                    <nav>
+                        <a href="#jsx"
+                            class="nav-link group flex items-center gap-3 px-4 py-3 text-sm font-semibold rounded-xl text-slate-600 hover:bg-white hover:text-sky-600 transition-all">
+                            <span class="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-sky-500"></span>
+                            Components & JSX
+                        </a>
+                        <a href="#props"
+                            class="nav-link group flex items-center gap-3 px-4 py-3 text-sm font-semibold rounded-xl text-slate-600 hover:bg-white hover:text-sky-600 transition-all">
+                            <span class="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-sky-500"></span>
+                            Props & Destructuring
+                        </a>
+                        <a href="#rendering"
+                            class="nav-link group flex items-center gap-3 px-4 py-3 text-sm font-semibold rounded-xl text-slate-600 hover:bg-white hover:text-sky-600 transition-all">
+                            <span class="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-sky-500"></span>
+                            How React Renders
+                        </a>
+                    </nav>
+                </div>
+                <div>
+                    <h3 class="text-[11px] font-black text-slate-400 uppercase tracking-widest mb-4">Data & Logic</h3>
+                    <nav>
+                        <a href="#props"
+                            class="nav-link group flex items-center gap-3 px-4 py-3 text-sm font-semibold rounded-xl text-slate-600 hover:bg-white hover:text-sky-600 transition-all">
+                            <span class="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-sky-500"></span>
+                            Dynamic Data
+                        </a>
+                        <a href="#rendering"
+                            class="nav-link group flex items-center gap-3 px-4 py-3 text-sm font-semibold rounded-xl text-slate-600 hover:bg-white hover:text-sky-600 transition-all">
+                            <span class="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-sky-500"></span>
+                            Structure & Strict Mode
+                        </a>
+                    </nav>
+                </div>
+            </div>
+        </aside>
+
+
+
+        <main class="flex-1 space-y-24 bg-slate-100">
+            <section class="">
+                <div></div>
+                <h1></h1>
+                <p></p>
+            </section>
+        </main>
+
+
+
+
+    </div>
+
+
 </body>
 </html>
