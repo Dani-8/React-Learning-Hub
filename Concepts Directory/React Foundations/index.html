@@ -84,12 +84,12 @@
                 <div>
                     <h3 class="text-[11px] font-black text-slate-400 uppercase tracking-widest mb-4">Data & Logic</h3>
                     <nav>
-                        <a href="#props"
+                        <a href="#lists"
                             class="nav-link group flex items-center gap-3 px-4 py-3 text-sm font-semibold rounded-xl text-slate-600 hover:bg-white hover:text-sky-600 transition-all">
                             <span class="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-sky-500"></span>
                             Dynamic Data
                         </a>
-                        <a href="#rendering"
+                        <a href="#structural"
                             class="nav-link group flex items-center gap-3 px-4 py-3 text-sm font-semibold rounded-xl text-slate-600 hover:bg-white hover:text-sky-600 transition-all">
                             <span class="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-sky-500"></span>
                             Structure & Strict Mode
@@ -101,7 +101,7 @@
 
 
 
-        <main class="flex-1 space-y-24">
+        <main class="flex-1 space-y-24 mb-[300px]">
             <!-- HEADER -->
             <section class="">
                 <div class="inline-block bg-sky-100 mb-8 px-3 py-1 rounded-full text-sky-700 text-[10px] font-bold uppercase tracking-wider">
@@ -192,9 +192,9 @@ function App() {
 
 
             <!-- Topic 2: Props & Destructuring -->
-            <section id="jsx" class="content-section space-y-8">
+            <section id="props" class="content-section space-y-8">
                 <div class="flex items-center gap-4">
-                    <div class="bg-emerald-50 w-12 h-12 rounded-2xl flex items-center justify-center text-emerald-600 text-lg font-bold">01</div>
+                    <div class="bg-emerald-50 w-12 h-12 rounded-2xl flex items-center justify-center text-emerald-600 text-lg font-bold">02</div>
                     <div class="font-bold text-3xl">Props & Destructuring</div>
                 </div>
 
@@ -300,6 +300,73 @@ return (
 
 
             <!-- Topic 3: The Rendering Cycle -->
+            <section id="rendering" class="content-section space-y-8">
+                <div class="flex items-center gap-4">
+                    <div class="bg-orange-50 w-12 h-12 rounded-2xl flex items-center justify-center text-orange-600 text-lg font-bold">03</div>
+                    <div class="font-bold text-3xl">How React Actually Renders</div>
+                </div>
+
+                <div class="space-y-6">
+                    <!-- EXAMPLE -->
+                    <div class="p-6 bg-slate-50 border border-dashed border-slate-300 rounded-2xl mb-5">
+                        <h2 class="font-bold text-slate-700 mb-2 flex items-center gap-2"><span>🍽️</span>The Restaurant Analogy</h2>
+                        <p class="text-sm text-slate-600">
+                            Think of React like a Kitchen: <b>Trigger</b> is the customer placing an order.
+                            <b>Render</b> is the chef preparing the food in the kitchen (hidden).
+                            <b>Commit</b> is the waiter placing the finished plate on your table (visible).
+                        </p>
+                    </div>
+
+                    
+                    <div class="flex flex-col md:flex-row gap-4">
+                        <!-- Step 1 -->
+                        <div class="render-step flex-1 p-6 bg-white border border-slate-200 rounded-2xl group transition-all hover:border-orange-200 shadow-sm hover:shadow-xl duration-300">
+                            <div class="w-12 h-12 rounded-full bg-orange-50 text-orange-600 flex items-center justify-center text-center text-xs font-bold mb-2 shadow-xl">Step 1</div>
+                            <h4 class="font-bold text-lg mb-2 text-slate-800">Trigger</h4>
+
+                            <div class="bg-orange-200/40 p-2 rounded text-[10px] font-mono mb-3 text-orange-700">setCount(1)</div>
+                            <p class="text-xs text-slate-500 leading-relaxed font-medium">The order is placed. React marks the component as "dirty" and schedules the update.</p>
+
+                            <div class="step-line mt-4 h-1 w-0 bg-orange-400 rounded-full transition-all duration-500"></div>
+                        </div>
+
+                        <!-- Step 2 -->
+                        <div class="render-step flex-1 p-6 bg-white border border-slate-200 rounded-2xl group transition-all hover:border-sky-200 shadow-sm hover:shadow-xl duration-300">
+                            <div class="w-12 h-12 rounded-full bg-indigo-50 text-indigo-600 flex items-center justify-center text-xs font-bold mb-2 shadow-xl">Step 2</div>
+                            <h4 class="font-bold text-lg mb-2 text-slate-800">Render (Math)</h4>
+
+                            <div class="bg-indigo-200/40 p-2 rounded text-[10px] font-mono mb-3 text-indigo-700">New JSX vs Old JSX</div>
+                            <p class="text-xs text-slate-500 leading-relaxed font-medium">The chef calculates the difference. "The old button was red, the new one is blue." No screen change yet.</p>
+
+                            <div class="step-line mt-4 h-1 w-0 bg-sky-400 rounded-full transition-all duration-500"></div>
+                        </div>
+
+                        <!-- Step 3 -->
+                        <div class="render-step flex-1 p-6 bg-sky-600 text-white rounded-2xl group shadow-sm hover:shadow-xl duration-300">
+                            <div class="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center text-xs font-bold mb-2 shadow-xl">Step 3</div>
+                            <h4 class="font-bold text-lg mb-2">Commit</h4>
+
+                            <div class="bg-white/10 p-2 rounded text-[10px] font-mono mb-3 text-indigo-100">DOM.update()</div>
+                            <p class="text-xs text-white/80 leading-relaxed">The waiter brings the plate. React applies the <b>minimal</b> changes to the real browser DOM.</p>
+                        </div>
+                    </div>
+
+
+                    <!-- COnfusion Block -->
+                    <div>
+                        <input type="checkbox" class="relative group">
+                        <label for="conf-render" class="">
+
+                        </label>
+                    </div>
+
+
+
+
+
+                </div>
+
+            </section>
 
 
         </main>
@@ -309,6 +376,6 @@ return (
 
     </div>
 
-
+    <script src="app.js"></script>
 </body>
 </html>
