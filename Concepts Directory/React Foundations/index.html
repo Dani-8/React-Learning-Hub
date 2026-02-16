@@ -125,7 +125,7 @@
                 </div>
 
                     <div class="space-y-4">
-                        <p class="text-slate-600 font-medium italic">A <span class="text-indigo-600 font-bold underline decoration-indigo-200">Component</span> 
+                        <p class="max-w-md text-slate-600 font-medium italic">A <span class="text-indigo-600 font-bold underline decoration-indigo-200">Component</span> 
                             is just a JavaScript function that returns a UI blueprint (JSX).
                         </p>
 
@@ -167,8 +167,27 @@ function App() {
                                     <h1 class="text-2xl font-black text-slate-800">Welcome to React</h1>
                                 </div>
                             </div>
-
                         </div>
+
+
+                        <div class="relative group max-w-sm">
+                            <input type="checkbox" checked id="conf-1" class="confusion-toggle absolute opacity-0">
+                            <label for="conf-1" class="flex items-center justify-between gap-10 p-6 text-white bg-indigo-600 rounded-2xl shadow-xl shadow-indigo-100 hover:bg-indigo-700 transition-colors">
+                                <span class="font-bold">Common Confusion: Why JSX?</span>
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    class="w-5 h-5 group-hover:rotate-12 transition-transform" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10" /> <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" /> <line x1="12" y1="17" x2="12.01" y2="17" />
+                                </svg>
+                            </label>
+
+                            <div class="confusion-box mt-4 p-6 bg-slate-900 text-slate-300 rounded-2xl text-sm leading-relaxed border-t-4 border-indigo-400">
+                                "Doesn't JS usually hate HTML tags?" Yes. Browser engines can't read JSX. React tools (like
+                                Babel) compile that JSX into <code class="text-sky-400">React.createElement()</code> calls.
+                                It's essentially "Syntactic Sugar" for a bunch of JS objects.
+                            </div>
+                        </div>
+
                     </div>
             </section>
 
