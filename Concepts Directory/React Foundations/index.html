@@ -60,22 +60,22 @@
     <div class="max-w-7xl px-6 py-12 flex gap-10">
         <!-- SIDEBAR -->
         <aside class="w-72 shrink-0 hidden lg:block">
-            <div class="sticky top-28 space-y-8 border-r border-r-slate-300">
+            <div class="sticky top-28 space-y-8 border-r border-r-slate-300/70">
                 <div>
                     <h3 class="text-[11px] font-black text-slate-400 uppercase tracking-widest mb-4">Core Concepts</h3>
                     <nav>
                         <a href="#jsx"
-                            class="nav-link group flex items-center gap-3 px-4 py-3 text-sm font-semibold rounded-xl text-slate-600 hover:bg-white hover:text-sky-600 transition-all">
+                            class="nav-link group flex items-center gap-3 px-4 py-3 text-sm font-semibold rounded-xl text-slate-600 hover:text-sky-600 transition-all">
                             <span class="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-sky-500"></span>
                             Components & JSX
                         </a>
                         <a href="#props"
-                            class="nav-link group flex items-center gap-3 px-4 py-3 text-sm font-semibold rounded-xl text-slate-600 hover:bg-white hover:text-sky-600 transition-all">
+                            class="nav-link group flex items-center gap-3 px-4 py-3 text-sm font-semibold rounded-xl text-slate-600 hover:text-sky-600 transition-all">
                             <span class="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-sky-500"></span>
                             Props & Destructuring
                         </a>
                         <a href="#rendering"
-                            class="nav-link group flex items-center gap-3 px-4 py-3 text-sm font-semibold rounded-xl text-slate-600 hover:bg-white hover:text-sky-600 transition-all">
+                            class="nav-link group flex items-center gap-3 px-4 py-3 text-sm font-semibold rounded-xl text-slate-600 hover:text-sky-600 transition-all">
                             <span class="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-sky-500"></span>
                             How React Renders
                         </a>
@@ -85,12 +85,12 @@
                     <h3 class="text-[11px] font-black text-slate-400 uppercase tracking-widest mb-4">Data & Logic</h3>
                     <nav>
                         <a href="#lists"
-                            class="nav-link group flex items-center gap-3 px-4 py-3 text-sm font-semibold rounded-xl text-slate-600 hover:bg-white hover:text-sky-600 transition-all">
+                            class="nav-link group flex items-center gap-3 px-4 py-3 text-sm font-semibold rounded-xl text-slate-600 hover:text-sky-600 transition-all">
                             <span class="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-sky-500"></span>
                             Dynamic Data
                         </a>
                         <a href="#structural"
-                            class="nav-link group flex items-center gap-3 px-4 py-3 text-sm font-semibold rounded-xl text-slate-600 hover:bg-white hover:text-sky-600 transition-all">
+                            class="nav-link group flex items-center gap-3 px-4 py-3 text-sm font-semibold rounded-xl text-slate-600 hover:text-sky-600 transition-all">
                             <span class="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-sky-500"></span>
                             Structure & Strict Mode
                         </a>
@@ -101,7 +101,7 @@
 
 
 
-        <main class="flex-1 space-y-24 mb-[300px]">
+        <main class="flex-1 space-y-24">
             <!-- HEADER -->
             <section class="">
                 <div class="inline-block bg-sky-100 mb-8 px-3 py-1 rounded-full text-sky-700 text-[10px] font-bold uppercase tracking-wider">
@@ -406,12 +406,57 @@ return (
                 </div>
 
                 <div class="space-y-6">
-                    <div class="bg-slate-800 p-8 rounded-[2rem] text-sky-300 shadow-2xl">
+                    <div class="bg-slate-900 p-8 rounded-[2rem] text-sky-300 shadow-2xl">
+
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
                             <div class="space-y-4">
-                                <span class="">App.jsx (Logic)</span>
+                                <span class="font-bold text-xs tracking-wider text-slate-500">App.jsx (Logic)</span>
+
+                                <div class="bg-slate-800/50 p-4 rounded-xl border border-white/5">
+                                    <pre class="text-xs"><code>const fruits = [
+    { id: 1, name: "🍎 Apple" },
+    { id: 2, name: "🍌 Banana" }
+]
+
+function App() {
+    
+    return (
+        &lt;ul&gt;
+            {fruits.map((fruit) => (
+            &lt;li key={fruit.id} className="fruit-item"&gt;
+                {fruit.name}
+            &lt;/li&gt;
+            ))}
+        &lt;/ul&gt;
+    )
+}</code></pre>
+                                </div>
+
+                                <p class="text-[11px] text-slate-400 italic">
+                                    React uses <code class="text-pink-400">.map()</code> to transform your data array into visual JSX elements.
+                                </p>
                             </div>
+
+                            <!-- live result -->
+                            <div class="space-y-4">
+                                <span class="font-bold text-xs tracking-wider text-slate-500">Live Result</span>
+
+                                <div class="bg-white/5 p-6 rounded-2xl border border-white/10">
+                                    <ul class="space-y-3">
+                                        <li class="p-4 bg-white/10 rounded-xl flex items-center gap-3 text-white border border-white/5 hover:bg-white/20 transition-all hover:translate-x-1 cursor-default">
+                                            <span class="text-[10px] font-bold bg-pink-500 text-white w-6 h-6 rounded-full flex items-center justify-center shadow-lg">1</span>
+                                            <span class="text-sm font-medium">🍎 Apple</span>
+                                        </li>
+                                        <li class="p-4 bg-white/10 rounded-xl flex items-center gap-3 text-white border border-white/5 hover:bg-white/20 transition-all hover:translate-x-1 cursor-default">
+                                            <span class="text-[10px] font-bold bg-pink-500 text-white w-6 h-6 rounded-full flex items-center justify-center shadow-lg">2</span>
+                                            <span class="text-sm font-medium">🍌 Banana</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
                         </div>
+
                     </div>
 
 
@@ -425,26 +470,63 @@ return (
                             </p>
                         </div>
                     </div>
+
                 </div>
-
-
             </section>
 
 
 
+            <section id="structural" class="content-section space-y-8">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-2xl bg-purple-50 text-purple-600 flex items-center justify-center font-black text-xl">05</div>
+                    <h2 class="text-3xl font-bold">Structure & Strict Mode</h2>
+                </div>
+
+                <div class="space-y-4">
+                    <h3 class="text-xl font-bold">1. Fragments vs Div Soup</h3>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        
+                    </div>
+
+                </div>
+            </section>
+
+
+
+            
+            <section class="bg-indigo-50 p-12 rounded-[3rem] text-center space-y-6">
+                <h3 class="text-2xl font-black text-indigo-900">Are you ready for State & Effects?</h3>
+                <p class="text-indigo-700/70 max-w-xl mx-auto">If you understand that React is just a <b>transformation
+                        engine</b> that takes <b>Data (Props)</b> and turns it into <b>Blueprints (JSX)</b> efficiently, you are 90% there.
+                </p>
+
+                <div class="flex flex-wrap justify-center gap-4 pt-4">
+                    <div class="px-4 py-2 bg-white rounded-full text-xs font-bold text-indigo-600 shadow-sm border border-indigo-100">
+                        Components are functions
+                    </div>
+                    <div class="px-4 py-2 bg-white rounded-full text-xs font-bold text-indigo-600 shadow-sm border border-indigo-100">
+                        JSX is JS Objects
+                    </div>
+                    <div class="px-4 py-2 bg-white rounded-full text-xs font-bold text-indigo-600 shadow-sm border border-indigo-100">
+                        Keys are unique
+                    </div>
+                </div>
+            </section>
 
 
         </main>
-
     </div>
 
     
-    <footer class="py-20 border-t border-slate-300 text-center">
-        <div class="flex items-center justify-center gap-2 mb-4">
-            <div class="w-6 h-6 bg-slate-200 rounded-full"></div>
-            <span class="font-bold text-slate-400 tracking-tight">The Roadmap Ends Here. Your Code Begins.</span>
+    <footer class="py-24 border-t border-slate-300/70 text-center">
+        <div class="inline-flex items-center justify-center gap-3 shadow-2xl mb-6 p-2 pr-5 bg-white rounded-full border border-slate-200 footer-glow">
+            <div class="w-8 h-8 bg-indigo-600 rounded-full flex items-center justify-center shadow-lg shadow-indigo-200">
+                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+            </div>
+            <span class="font-bold text-slate-600 text-sm tracking-tight italic">The Roadmap Ends Here. Your Code Begins.</span>
         </div>
-        <p class="text-xs text-slate-400 font-mono italic">Compiled with ❤️ for the future React Dev.</p>
+        <p class="text-[12px] text-slate-400 font-mono uppercase tracking-[0.2em]">Compiled with ❤️ for the future React Dev</p>
     </footer>
 
 
