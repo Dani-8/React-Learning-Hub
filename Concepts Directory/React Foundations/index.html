@@ -317,7 +317,7 @@ return (
                         </p>
                     </div>
 
-                    
+
                     <div class="flex flex-col md:flex-row gap-4">
                         <!-- Step 1 -->
                         <div class="render-step flex-1 p-6 bg-white border border-slate-200 rounded-2xl group transition-all hover:border-orange-200 shadow-sm hover:shadow-xl duration-300">
@@ -353,28 +353,100 @@ return (
 
 
                     <!-- COnfusion Block -->
-                    <div>
-                        <input type="checkbox" class="relative group">
-                        <label for="conf-render" class="">
+                    <div class="relative group">
+                        <input type="checkbox" id="conf-render" class="confusion-toggle absolute opacity-0">
 
+                        <label for="conf-render" class="cursor-pointer flex items-center justify-between p-6 bg-slate-800 text-white rounded-2xl hover:bg-slate-700 transition-colors">
+                            <span class="font-bold text-sm flex items-center gap-2">
+                                <span class="text-xl">🤔</span> Wait, doesn't re-rendering make the app slow?
+                            </span>
+                            <span class="text-[10px] text-slate-400 underline uppercase tracking-widest font-bold">Click to see why not</span>
                         </label>
+
+                        <div class="confusion-box mt-4 p-6 bg-white rounded-2xl text-sm leading-relaxed border border-slate-200 text-slate-600 shadow-inner animate-in fade-in slide-in-from-top-2 duration-300">
+                            <p>Common mistake: Thinking a <b>"Render"</b> is a <b>"Paint"</b>.</p>
+                            <ul class="mt-2 space-y-2">
+                                <li>• <b class="text-slate-800">Rendering:</b> Internal JS calculation (extremely fast).</li>
+                                <li>• <b class="text-slate-800">Painting:</b> Physical update to the screen (slow).</li>
+                            </ul>
+                            <p class="mt-3 text-emerald-600 font-medium">React is fast because it can perform thousands of renders but only triggers 1 efficient paint.</p>
+                        </div>
                     </div>
 
 
-
-
+                    <div class="mt-12 text-center p-8 bg-blue-50/50 rounded-[2rem] border border-blue-100">
+                        <p class="text-blue-800 font-medium">
+                            Still feeling a bit fuzzy? Don't worry!
+                            <span class="block text-sm text-blue-600 mt-1 italic">
+                                In the next module when we cover <b>useState()</b>, everything will become crystalclear.
+                            </span> 
+                        </p>
+                    </div>
 
                 </div>
+            </section>
+
+
+
+            <!-- SECTION 04: DYNAMIC DATA -->
+            <section id="lists" class="content-section space-y-8">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-2xl bg-pink-50 text-pink-600 flex items-center justify-center font-black text-xl">
+                        04</div>
+                    <h2 class="text-3xl font-bold text-slate-800">Dynamic Data</h2>
+                </div>
+
+                <!-- Description -->
+                <div class="max-w-3xl">
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        In React, we don't manually repeat HTML tags for every piece of data. Instead, we use the 
+                        <span class="text-pink-600 font-bold">.map()</span> method to loop through an array and 
+                        automatically generate a list of components based on your data.
+                    </p>
+                </div>
+
+                <div class="space-y-6">
+                    <div class="bg-slate-800 p-8 rounded-[2rem] text-sky-300 shadow-2xl">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                            <div class="space-y-4">
+                                <span class="">App.jsx (Logic)</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Pro Tip -->
+                    <div class="max-w-3xl flex gap-4 border border-pink-200 bg-pink-50 p-6 rounded-2xl">
+                        <div class="text-3xl">🔑</div>
+                        <div>
+                            <h4 class="text-sm text-pink-700 font-bold mb-1">They "Key" Rule</h4>
+                            <p class="text-pink-800 text-xs">
+                                Always provide a <b>unique key</b> (like an ID) to each list item. This helps React's "diffing" algorithm know exactly which item changed, moved, or was deleted.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
 
             </section>
 
 
+
+
+
         </main>
 
-
-
-
     </div>
+
+    
+    <footer class="py-20 border-t border-slate-300 text-center">
+        <div class="flex items-center justify-center gap-2 mb-4">
+            <div class="w-6 h-6 bg-slate-200 rounded-full"></div>
+            <span class="font-bold text-slate-400 tracking-tight">The Roadmap Ends Here. Your Code Begins.</span>
+        </div>
+        <p class="text-xs text-slate-400 font-mono italic">Compiled with ❤️ for the future React Dev.</p>
+    </footer>
+
 
     <script src="app.js"></script>
 </body>
