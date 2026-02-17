@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Plus+Jakarta+Sans:wght@400;600;800&display=swap');
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: #f1f5f9;
+}
+/* --------------------------------------------------- */
+/* --------------------------------------------------- */
+
+code {
+    font-family: 'Fira Code', monospace;
+}
+
+.file-card {
+    transition: all 0.3s ease;
+}
+
+.file-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.folder-tree ul {
+    border-left: 2px solid #e2e8f0;
+    margin-left: 0.75rem;
+    padding-left: 1rem;
+}
+
+.roadmap-step {
+    position: relative;
+}
+
+.roadmap-step::after {
+    content: '';
+    position: absolute;
+    right: -1rem;
+    top: 50%;
+    width: 2px;
+    height: 20px;
+    background: #e2e8f0;
+    transform: translateY(-50%);
+}
+
+.roadmap-step:last-child::after {
+    display: none;
+}
