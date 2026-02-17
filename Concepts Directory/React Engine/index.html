@@ -9,6 +9,12 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="p-4 md:p-12">
+    <nav class="max-w-6xl mx-auto mb-8">
+        <a href="../index.html" class="text-slate-400 hover:text-indigo-600 flex items-center gap-2 text-xs font-bold uppercase tracking-widest transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+            Back to Roadmap
+        </a>
+    </nav>
 
     <div class="max-w-6xl mx-auto space-y-16"> 
 
@@ -18,6 +24,93 @@
             <p class="text-slate-500 max-w-xl mx-auto text-sm">How your code travels from a simple HTML file to a dynamic interactive application.</p>
         </header>
 
+
+        <section class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+            <!-- index.html -->
+            <div class="file-card bg-white rounded-3xl border border-slate-300 overflow-hidden flex flex-col">
+                <div class="bg-slate-50 px-5 py-3 border-b border-slate-200 flex justify-between items-center">
+                    <span class="font-bold text-xs text-slate-600 uppercase tracking-widest">1. index.html</span>
+                    <span class="text-[10px] font-bold text-orange-500 bg-orange-50 px-2 py-0.5 rounded">PUBLIC</span>
+                </div>
+
+                <div class="p-5 bg-slate-900 flex-grow text-wrap">
+                    <pre class="text-[11px] leading-relaxed text-orange-200"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+ &lt;head&gt;
+   &lt;meta charset="UTF-8" /&gt;
+   &lt;title&gt;React App&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+
+   <span class="text-white bg-orange-500/20 px-1 rounded">&lt;div id="root"&gt;&lt;/div&gt;</span>
+
+   &lt;script type="module" src="/src/main.jsx"&gt;&lt;/script&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                </div>
+
+                <div class="p-5 text-xs text-slate-500 bg-white">
+                    The <b>Landing Zone</b>. The browser loads this first. It's empty until React finds that <code>#root</code> div.
+                </div>
+            </div>
+
+
+            <!-- main.jsx -->
+            <div class="file-card bg-white rounded-3xl border border-slate-300 overflow-hidden flex flex-col">
+                <div class="bg-slate-50 px-5 py-3 border-b border-slate-200 flex justify-between items-center">
+                    <span class="font-bold text-xs text-slate-600 uppercase tracking-widest">2. main.jsx</span>
+                    <span class="text-[10px] font-bold text-indigo-500 bg-indigo-50 px-2 py-0.5 rounded">ENTRY</span>
+                </div>
+                <div class="p-5 bg-slate-900 flex-grow">
+                    <pre class="text-[11px] leading-relaxed text-indigo-200"><code>import React from 'react'
+import ReactDOM from 'react-dom/client'
+import App from './App.jsx'
+import './index.css'
+
+<span class="text-white bg-indigo-500/20 px-1 rounded">ReactDOM.createRoot(
+ document.getElementById('root')
+).render(
+ &lt;React.StrictMode&gt;
+  &lt;App /&gt;
+ &lt;/React.StrictMode&gt;
+)</span></code></pre>
+                </div>
+                <div class="p-5 text-xs text-slate-500 bg-white">
+                    The <b>Bridge</b>. It imports React, finds the <code>#root</code>, and renders your <code>App</code> component inside it.
+                </div>
+            </div>
+
+
+            <!-- App.jsx -->
+            <div class="file-card bg-white rounded-3xl border border-slate-300 overflow-hidden flex flex-col">
+                <div class="bg-slate-50 px-5 py-3 border-b border-slate-200 flex justify-between items-center">
+                    <span class="font-bold text-xs text-slate-600 uppercase tracking-widest">3. App.jsx</span>
+                    <span class="text-[10px] font-bold text-sky-500 bg-sky-50 px-2 py-0.5 rounded">ROOT</span>
+                </div>
+                <div class="p-5 bg-slate-900 flex-grow">
+                    <pre class="text-[11px] leading-relaxed text-sky-200"><code>import Navbar from './Navbar'
+import Home from './Home'
+
+function App() {
+ return (
+  <span class="text-white bg-sky-500/20 px-1 rounded">&lt;div class="app"&gt;
+   &lt;Navbar /&gt;
+   &lt;main&gt;
+    &lt;Home /&gt;
+   &lt;/main&gt;
+  &lt;/div&gt;</span>
+ )
+}
+
+export default App</code></pre>
+                </div>
+                <div class="p-5 text-xs text-slate-500 bg-white">
+                    The <b>Boss</b>. This is the first "real" component. It decides which major parts (Navbar, Pages) to show.
+                </div>
+            </div>
+
+        </section>
 
     </div>
 
