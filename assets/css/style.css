@@ -92,7 +92,7 @@ body {
     border-radius: 5000px;
     border: 1px solid rgba(31, 178, 241, 0.4);
     color: #1fb2f1;
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 700;
     text-transform: uppercase;
 }
@@ -100,7 +100,7 @@ body {
 .header h1 {
     font-size: 55px;
     font-weight: 900;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .header h1 span {
@@ -112,6 +112,7 @@ body {
 .header p{
     color: var(--text-muted);
     font-size: 17px;
+    text-transform: capitalize;
 }
 /* ---------------------------------------- */
 
