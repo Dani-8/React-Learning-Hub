@@ -99,3 +99,13 @@ pre {
 .peek-container:hover .peek-preview {
     display: block;
 }
+
+
+
+
+
+/* Module Divider */
+.module-divider {
+    height: 2px;
+    background: linear-gradient(to right, transparent, rgba(193, 205, 220, 0.8), transparent);
+}
