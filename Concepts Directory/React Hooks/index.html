@@ -122,7 +122,7 @@
 
 
             <!-- Hook Rules Section -->
-            <section class="max-w-2xl w-full p-8 bg-white rounded-[2rem] border border-amber-200 shadow-xl shadow-amber-900/5 space-y-8 relative overflow-hidden">
+            <section class="max-w-3xl w-full p-8 bg-white rounded-[2rem] border border-amber-200 shadow-xl shadow-amber-900/5 space-y-8 relative overflow-hidden my-10">
 
                 <div class="absolute -top-12 -right-12 w-32 h-32 bg-amber-100 rounded-full blur-3xl opacity-50"></div>
 
@@ -142,49 +142,90 @@
                     </div>
                 </div>
 
-                <div class="grid grid-cols-1 gap-6 relative">
+                <div class="grid grid-cols-1 gap-10 relative">
 
-                    <div class="group p-5 bg-amber-50/50 rounded-2xl border border-transparent hover:border-amber-200 hover:bg-white transition-all duration-300">
+                    <div class="space-y-4">
                         <div class="flex items-start gap-4">
-                            <div class="mt-1 bg-emerald-500 rounded-full p-1 shadow-sm">
+                            <div class="mt-1 bg-emerald-500 rounded-full p-1 shadow-sm shrink-0">
                                 <svg class="h-3 w-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"
                                     stroke-width="4">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
                                 </svg>
                             </div>
                             <div class="space-y-1">
-                                <h4 class="font-bold text-amber-900">Call at the Top Level</h4>
+                                <h4 class="font-bold text-amber-900 text-lg">1. Call at the Top Level</h4>
                                 <p class="text-slate-600 text-sm leading-relaxed">
-                                    Don’t call Hooks inside loops, conditions, or nested functions. This ensures Hooks
-                                    are called in the same order each time a component renders.
+                                    Don’t call Hooks inside loops, conditions, or nested functions. Hooks must always be
+                                    called at the top of your React function.
                                 </p>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-[13px]">
+                            <div class="bg-rose-50 border border-rose-100 rounded-xl p-4">
+                                <span class="text-rose-600 font-bold uppercase text-[10px] tracking-widest block mb-2">❌
+                                    Incorrect</span>
+                                <code class="text-rose-800 block whitespace-pre">if (user) {
+  useEffect(() => { ... });
+}</code>
+                            </div>
+                            <div class="bg-emerald-50 border border-emerald-100 rounded-xl p-4">
+                                <span
+                                    class="text-emerald-600 font-bold uppercase text-[10px] tracking-widest block mb-2">✅
+                                    Correct</span>
+                                <code class="text-emerald-800 block whitespace-pre">useEffect(() => {
+  if (user) { ... }
+}, [user]);</code>
                             </div>
                         </div>
                     </div>
 
-                    <div class="group p-5 bg-amber-50/50 rounded-2xl border border-transparent hover:border-amber-200 hover:bg-white transition-all duration-300">
+
+                    <div class="space-y-4">
                         <div class="flex items-start gap-4">
-                            <div class="mt-1 bg-emerald-500 rounded-full p-1 shadow-sm">
+                            <div class="mt-1 bg-emerald-500 rounded-full p-1 shadow-sm shrink-0">
                                 <svg class="h-3 w-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"
                                     stroke-width="4">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
                                 </svg>
                             </div>
                             <div class="space-y-1">
-                                <h4 class="font-bold text-amber-900">Only Call from React Functions</h4>
+                                <h4 class="font-bold text-amber-900 text-lg">2. Only Call from React Functions</h4>
                                 <p class="text-slate-600 text-sm leading-relaxed">
-                                    Call Hooks from React function components or Custom Hooks. Avoid calling them from
+                                    Hooks can only be used in Function Components or Custom Hooks. They will not work in
                                     regular JavaScript functions.
                                 </p>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-[13px]">
+                            <div class="bg-rose-50 border border-rose-100 rounded-xl p-4">
+                <span class="text-rose-600 font-bold uppercase text-[10px] tracking-widest block mb-2">❌
+                    Regular JS Function</span>
+                <code class="text-rose-800 block whitespace-pre">function calculateData() {
+  const [val] = useState(0); 
+  return val * 2;
+}</code>
+                            </div>
+                            <div class="bg-emerald-50 border border-emerald-100 rounded-xl p-4">
+                                <span
+                                    class="text-emerald-600 font-bold uppercase text-[10px] tracking-widest block mb-2">✅
+                                    React Component</span>
+                                <code class="text-emerald-800 block whitespace-pre">function MyCard() {
+  const [val] = useState(0);
+  return &lt;div&gt;{val}&lt;/div&gt;;
+}</code>
                             </div>
                         </div>
                     </div>
 
                 </div>
 
-                <div class="pt-4 border-t border-amber-100 flex items-center justify-between text-[10px] font-bold uppercase tracking-widest text-amber-700/50">
+                <!-- Pro Tip Footer -->
+                <div
+                    class="pt-6 border-t border-amber-100 flex items-center justify-between text-[10px] font-bold uppercase tracking-widest text-amber-700/50">
                     <span>ESLint Plugin React Hooks</span>
-                    <span class="px-2 py-1 bg-amber-100 rounded-md text-amber-800">Strict Mode</span>
+                    <span class="px-2 py-1 bg-amber-100 rounded-md text-amber-800">React 18+ Pattern</span>
                 </div>
 
             </section>
