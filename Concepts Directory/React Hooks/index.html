@@ -200,10 +200,10 @@
 
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-[13px]">
                             <div class="bg-rose-50 border border-rose-100 rounded-xl p-4">
-                <span class="text-rose-600 font-bold uppercase text-[10px] tracking-widest block mb-2">❌
-                    Regular JS Function</span>
-                <code class="text-rose-800 block whitespace-pre">function calculateData() {
+                                <span class="text-rose-600 font-bold uppercase text-[10px] tracking-widest block mb-2">❌ Regular JS Function</span>
+                                <code class="text-rose-800 block whitespace-pre">function calculateData() {
   const [val] = useState(0); 
+
   return val * 2;
 }</code>
                             </div>
@@ -213,19 +213,15 @@
                                     React Component</span>
                                 <code class="text-emerald-800 block whitespace-pre">function MyCard() {
   const [val] = useState(0);
-  return &lt;div&gt;{val}&lt;/div&gt;;
+  
+  return (
+    &lt;div&gt;{val}&lt;/div&gt;
+    );
 }</code>
                             </div>
                         </div>
                     </div>
 
-                </div>
-
-                <!-- Pro Tip Footer -->
-                <div
-                    class="pt-6 border-t border-amber-100 flex items-center justify-between text-[10px] font-bold uppercase tracking-widest text-amber-700/50">
-                    <span>ESLint Plugin React Hooks</span>
-                    <span class="px-2 py-1 bg-amber-100 rounded-md text-amber-800">React 18+ Pattern</span>
                 </div>
 
             </section>
