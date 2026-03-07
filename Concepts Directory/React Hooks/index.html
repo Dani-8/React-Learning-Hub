@@ -104,132 +104,134 @@
         <main class="space-y-24 flex-1 mb-40">
 
             <!-- Header -->
-            <section class="space-y-6">
-                <div
-                    class="inline-block px-3 py-1 rounded-full bg-purple-100 text-purple-700 text-[10px] font-bold uppercase tracking-wider">
-                    The Roadmap: Module 03</div>
-
-                <h1 class="text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.1]">Hooks: The Functional
-                    <br>
-                    <span
-                        class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-purple-600">Superpowers.</span>
-                </h1>
-
-                <p class="text-md text-slate-500 max-w-2xl leading-relaxed">Hooks allow you to use state and other React
-                    features without writing a class. <br> They are the building blocks of modern React architecture.
-                </p>
-            </section>
-
-
-            <!-- Hook Rules -->
-            <section
-                class="max-w-3xl w-full p-8 bg-white rounded-[2rem] border border-amber-200 shadow-xl shadow-amber-900/5 space-y-8 relative overflow-hidden my-10">
-
-                <div class="absolute -top-12 -right-12 w-32 h-32 bg-amber-100 rounded-full blur-3xl opacity-50"></div>
-
-                <!-- Header -->
-                <div class="flex items-center gap-4 relative">
-                    <div class="p-3 bg-amber-50 rounded-2xl border border-amber-200 shadow-sm">
-                        <svg class="h-6 w-6 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                            stroke-width="2.5">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.628.283a2 2 0 01-1.186.127l-2.96-.592a2 2 0 01-1.317-1.066L4.858 10.3c-.373-.67-.412-1.477-.11-2.176l.11-.257a6.75 6.75 0 0111.454-1.928l.156.17a6.75 6.75 0 009.682-.361" />
-                        </svg>
-                    </div>
-
-                    <div>
-                        <h2 class="text-2xl font-bold text-slate-900">The Laws of Hooks</h2>
-                    </div>
-                </div>
-
-                <div class="grid grid-cols-1 gap-10 relative">
-
-                    <div class="space-y-4">
-                        <div class="flex items-start gap-4">
-                            <div class="mt-1 bg-emerald-500 rounded-full p-1 shadow-sm shrink-0">
-                                <svg class="h-3 w-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                                    stroke-width="4">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-                                </svg>
-                            </div>
-
-                            <div class="space-y-1">
-                                <h4 class="font-bold text-amber-900 text-lg">1. Call at the Top Level</h4>
-                                <p class="text-slate-600 text-sm leading-relaxed">
-                                    Don’t call Hooks inside loops, conditions, or nested functions. Hooks must always be
-                                    called at the top of your React function.
-                                </p>
-                            </div>
+            <div class="space-y-10">
+                <section class="space-y-6">
+                    <div
+                        class="inline-block px-3 py-1 rounded-full bg-purple-100 text-purple-700 text-[10px] font-bold uppercase tracking-wider">
+                        The Roadmap: Module 03</div>
+    
+                    <h1 class="text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.1]">Hooks: The Functional
+                        <br>
+                        <span
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-purple-600">Superpowers.</span>
+                    </h1>
+    
+                    <p class="text-md text-slate-500 max-w-2xl leading-relaxed">Hooks allow you to use state and other React
+                        features without writing a class. <br> They are the building blocks of modern React architecture.
+                    </p>
+                </section>
+    
+    
+                <!-- Hook Rules -->
+                <section class="max-w-3xl w-full p-8 bg-white rounded-[2rem] border border-amber-200 shadow-xl shadow-amber-900/5 space-y-8 relative overflow-hidden">
+    
+                    <div class="absolute -top-12 -right-12 w-32 h-32 bg-amber-100 rounded-full blur-3xl opacity-50"></div>
+    
+                    <!-- Header -->
+                    <div class="flex items-center gap-4 relative">
+                        <div class="p-3 bg-amber-50 rounded-2xl border border-amber-200 shadow-sm">
+                            <svg class="h-6 w-6 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                stroke-width="2.5">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.628.283a2 2 0 01-1.186.127l-2.96-.592a2 2 0 01-1.317-1.066L4.858 10.3c-.373-.67-.412-1.477-.11-2.176l.11-.257a6.75 6.75 0 0111.454-1.928l.156.17a6.75 6.75 0 009.682-.361" />
+                            </svg>
                         </div>
-
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-[13px]">
-                            <div class="bg-rose-50 border border-rose-100 rounded-xl p-4">
-                                <span class="text-rose-600 font-bold uppercase text-[10px] tracking-widest block mb-2">❌
-                                    Incorrect</span>
-                                <code class="text-rose-800 block whitespace-pre">if (user) {
-  useEffect(() => { ... });
-}</code>
-                            </div>
-
-
-                            <div class="bg-emerald-50 border border-emerald-100 rounded-xl p-4">
-                                <span
-                                    class="text-emerald-600 font-bold uppercase text-[10px] tracking-widest block mb-2">✅
-                                    Correct</span>
-                                <code class="text-emerald-800 block whitespace-pre">useEffect(() => {
-  if (user) { ... }
-}, [user]);</code>
-                            </div>
+    
+                        <div>
+                            <h2 class="text-2xl font-bold text-slate-900">The Laws of Hooks</h2>
                         </div>
                     </div>
-
-
-                    <div class="space-y-4">
-                        <div class="flex items-start gap-4">
-                            <div class="mt-1 bg-emerald-500 rounded-full p-1 shadow-sm shrink-0">
-                                <svg class="h-3 w-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                                    stroke-width="4">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-                                </svg>
+    
+                    <div class="grid grid-cols-1 gap-10 relative">
+    
+                        <div class="space-y-4">
+                            <div class="flex items-start gap-4">
+                                <div class="mt-1 bg-emerald-500 rounded-full p-1 shadow-sm shrink-0">
+                                    <svg class="h-3 w-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                        stroke-width="4">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                    </svg>
+                                </div>
+    
+                                <div class="space-y-1">
+                                    <h4 class="font-bold text-amber-900 text-lg">1. Call at the Top Level</h4>
+                                    <p class="text-slate-600 text-sm leading-relaxed">
+                                        Don’t call Hooks inside loops, conditions, or nested functions. Hooks must always be
+                                        called at the top of your React function.
+                                    </p>
+                                </div>
                             </div>
-                            <div class="space-y-1">
-                                <h4 class="font-bold text-amber-900 text-lg">2. Only Call from React Functions</h4>
-                                <p class="text-slate-600 text-sm leading-relaxed">
-                                    Hooks can only be used in Function Components or Custom Hooks. They will not work in
-                                    regular JavaScript functions.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-[13px]">
-                            <div class="bg-rose-50 border border-rose-100 rounded-xl p-4">
-                                <span class="text-rose-600 font-bold uppercase text-[10px] tracking-widest block mb-2">❌
-                                    Regular JS Function</span>
-                                <code class="text-rose-800 block whitespace-pre">function calculateData() {
-  const [val] = useState(0); 
-
-  return val * 2;
-}</code>
-                            </div>
-
-                            <div class="bg-emerald-50 border border-emerald-100 rounded-xl p-4">
-                                <span
-                                    class="text-emerald-600 font-bold uppercase text-[10px] tracking-widest block mb-2">✅
-                                    React Component</span>
-                                <code class="text-emerald-800 block whitespace-pre">function MyCard() {
-  const [val] = useState(0);
-  
-  return (
-    &lt;div&gt;{val}&lt;/div&gt;
-    );
-}</code>
+    
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-[13px]">
+                                <div class="bg-rose-50 border border-rose-100 rounded-xl p-4">
+                                    <span class="text-rose-600 font-bold uppercase text-[10px] tracking-widest block mb-2">❌
+                                        Incorrect</span>
+                                    <code class="text-rose-800 block whitespace-pre">if (user) {
+      useEffect(() => { ... });
+    }</code>
+                                </div>
+    
+    
+                                <div class="bg-emerald-50 border border-emerald-100 rounded-xl p-4">
+                                    <span
+                                        class="text-emerald-600 font-bold uppercase text-[10px] tracking-widest block mb-2">✅
+                                        Correct</span>
+                                    <code class="text-emerald-800 block whitespace-pre">useEffect(() => {
+      if (user) { ... }
+    }, [user]);</code>
+                                </div>
                             </div>
                         </div>
+    
+    
+                        <div class="space-y-4">
+                            <div class="flex items-start gap-4">
+                                <div class="mt-1 bg-emerald-500 rounded-full p-1 shadow-sm shrink-0">
+                                    <svg class="h-3 w-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                        stroke-width="4">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                    </svg>
+                                </div>
+                                <div class="space-y-1">
+                                    <h4 class="font-bold text-amber-900 text-lg">2. Only Call from React Functions</h4>
+                                    <p class="text-slate-600 text-sm leading-relaxed">
+                                        Hooks can only be used in Function Components or Custom Hooks. They will not work in
+                                        regular JavaScript functions.
+                                    </p>
+                                </div>
+                            </div>
+    
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-[13px]">
+                                <div class="bg-rose-50 border border-rose-100 rounded-xl p-4">
+                                    <span class="text-rose-600 font-bold uppercase text-[10px] tracking-widest block mb-2">❌
+                                        Regular JS Function</span>
+                                    <code class="text-rose-800 block whitespace-pre">function calculateData() {
+      const [val] = useState(0); 
+    
+      return val * 2;
+    }</code>
+                                </div>
+    
+                                <div class="bg-emerald-50 border border-emerald-100 rounded-xl p-4">
+                                    <span
+                                        class="text-emerald-600 font-bold uppercase text-[10px] tracking-widest block mb-2">✅
+                                        React Component</span>
+                                    <code class="text-emerald-800 block whitespace-pre">function MyCard() {
+      const [val] = useState(0);
+      
+      return (
+        &lt;div&gt;{val}&lt;/div&gt;
+        );
+    }</code>
+                                </div>
+                            </div>
+                        </div>
+    
                     </div>
+    
+                </section>
+            </div>
 
-                </div>
-
-            </section>
 
 
             <!-- useState -->
@@ -265,8 +267,7 @@
 
 
                 <!-- visual presentation of usestate -->
-                <div
-                    class="bg-indigo-50/50 p-1 rounded-[2rem] border border-indigo-100 overflow-hidden text-center md:text-left">
+                <div class="bg-indigo-50/50 p-1 rounded-[2rem] border border-indigo-100 overflow-hidden text-center md:text-left">
                     <div class="bg-white rounded-[1.8rem] p-8 flex flex-col md:flex-row items-center gap-8 shadow-sm">
                         <div class="flex-1 space-y-4">
                             <h4 class="text-[10px] font-black text-indigo-400 uppercase tracking-widest">Visual
@@ -313,28 +314,80 @@
 
 
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div class="space-y-4">
-                        <p class="text-slate-600 text-sm">Imagine state as a battery that keeps your component's data
-                            alive even when it re-renders.</p>
-                        <div class="p-4 bg-slate-900 rounded-xl">
-                            <pre class="text-xs text-indigo-300"><code>const [energy, setEnergy] = useState(100);
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+                    <!-- code -->
+                    <div class="space-y-6">
+                        <div class="space-y-3">
+                            <h4 class="text-sm font-black text-slate-400 uppercase tracking-widest">How it works</h4>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                Think of <b class="text-indigo-600">useState</b> as a light switch on a wall. When you
+                                flip the switch (<code class="bg-slate-100 px-1 rounded">setIsOn</code>), the room
+                                changes (<code class="bg-slate-100 px-1 rounded">re-render</code>) and the light
+                                reflects the new state instantly.
+                            </p>
+                        </div>
 
-const recharge = () => setEnergy(energy + 10);</code></pre>
+
+                        <div class="relative group">
+                            <div
+                                class="absolute -inset-1 bg-gradient-to-r from-indigo-500 to-slate-800 rounded-2xl blur opacity-10 group-hover:opacity-20 transition duration-1000">
+                            </div>
+                            <div class="relative p-5 bg-slate-900 rounded-xl overflow-x-auto shadow-2xl">
+                                <div class="flex gap-1.5 mb-3">
+                                    <div class="w-2 h-2 rounded-full bg-rose-500/50"></div>
+                                    <div class="w-2 h-2 rounded-full bg-amber-500/50"></div>
+                                    <div class="w-2 h-2 rounded-full bg-emerald-500/50"></div>
+                                </div>
+                                <pre class="text-xs font-mono leading-relaxed"><code class="text-indigo-300">const [isOn, setIsOn] = useState(false);
+
+<span class="text-slate-500">// Calling this function flips the switch</span>
+const toggleLight = () => {
+  setIsOn(!isOn);
+};</code></pre>
+                            </div>
                         </div>
                     </div>
 
-                    <div
-                        class="bg-white border-2 border-dashed border-slate-200 rounded-2xl p-6 flex flex-col justify-center gap-6">
-                        <div class="flex items-center justify-between p-3 bg-slate-50 rounded-xl">
-                            <span class="text-xs font-bold text-slate-400 tracking-widest uppercase">Variable</span>
-                            <span class="text-xs line-through text-slate-400">Lost on Re-render</span>
+
+                    <div class="bg-white p-8 rounded-[2rem] border border-slate-200 shadow-sm flex flex-col justify-center relative overflow-hidden">
+                        <h4 class="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] text-center mb-8">Component Memory</h4>
+
+                        <div class="space-y-6 relative">
+
+                            <div class="relative flex items-center gap-5 p-3 rounded-2xl border border-dashed border-slate-400 opacity-50">
+                                <div class="relative z-10 w-10 h-10 rounded-2xl bg-slate-100 flex items-center justify-center text-slate-400 shrink-0">
+                                    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                                    </svg>
+                                </div>
+
+                                <div class="flex-1">
+                                    <div class="flex items-center gap-2 mb-0.5">
+                                        <span class="text-xs font-black text-slate-500 uppercase tracking-tighter">Normal Variable</span>
+                                    </div>
+                                    <p class="text-xs font-bold text-slate-400 line-through">Resets on Re-render</p>
+                                </div>
+                            </div>
+
+                            <div class="relative flex items-center gap-5 p-3 rounded-2xl bg-indigo-600 shadow-xl shadow-indigo-100 transform transition">
+                                <div class="relative z-10 w-10 h-10 rounded-2xl bg-white/20 flex items-center justify-center text-white shrink-0">
+                                    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                                    </svg>
+                                </div>
+
+                                <div class="flex-1">
+                                    <div class="flex items-center gap-2 mb-0.5">
+                                        <span class="text-xs font-black text-white uppercase tracking-tighter">React State</span>
+                                    </div>
+                                    <p class="text-xs font-black text-indigo-100">Preserved in Memory</p>
+                                </div>
+                            </div>
                         </div>
 
-                        <div
-                            class="flex items-center justify-between p-3 bg-indigo-50 rounded-xl border border-indigo-100">
-                            <span class="text-xs font-bold text-indigo-600 tracking-widest uppercase">State</span>
-                            <span class="text-xs font-black text-indigo-600">Preserved Memory</span>
+                        <div class="mt-2 pt-4 border-t border-slate-50 text-center">
+                            <span class="text-[11px] text-slate-400 font-bold italic tracking-wide">"React remembers, variables forget."</span>
                         </div>
                     </div>
                 </div>
