@@ -109,24 +109,29 @@
                     <div
                         class="inline-block px-3 py-1 rounded-full bg-purple-100 text-purple-700 text-[10px] font-bold uppercase tracking-wider">
                         The Roadmap: Module 03</div>
-    
-                    <h1 class="text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.1]">Hooks: The Functional
+
+                    <h1 class="text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.1]">Hooks: The
+                        Functional
                         <br>
                         <span
                             class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-purple-600">Superpowers.</span>
                     </h1>
-    
-                    <p class="text-md text-slate-500 max-w-2xl leading-relaxed">Hooks allow you to use state and other React
-                        features without writing a class. <br> They are the building blocks of modern React architecture.
+
+                    <p class="text-md text-slate-500 max-w-2xl leading-relaxed">Hooks allow you to use state and other
+                        React
+                        features without writing a class. <br> They are the building blocks of modern React
+                        architecture.
                     </p>
                 </section>
-    
-    
+
+
                 <!-- Hook Rules -->
-                <section class="max-w-3xl w-full p-8 bg-white rounded-[2rem] border border-amber-200 shadow-xl shadow-amber-900/5 space-y-8 relative overflow-hidden">
-    
-                    <div class="absolute -top-12 -right-12 w-32 h-32 bg-amber-100 rounded-full blur-3xl opacity-50"></div>
-    
+                <section
+                    class="max-w-3xl w-full p-8 bg-white rounded-[2rem] border border-amber-200 shadow-xl shadow-amber-900/5 space-y-8 relative overflow-hidden">
+
+                    <div class="absolute -top-12 -right-12 w-32 h-32 bg-amber-100 rounded-full blur-3xl opacity-50">
+                    </div>
+
                     <!-- Header -->
                     <div class="flex items-center gap-4 relative">
                         <div class="p-3 bg-amber-50 rounded-2xl border border-amber-200 shadow-sm">
@@ -136,42 +141,44 @@
                                     d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.628.283a2 2 0 01-1.186.127l-2.96-.592a2 2 0 01-1.317-1.066L4.858 10.3c-.373-.67-.412-1.477-.11-2.176l.11-.257a6.75 6.75 0 0111.454-1.928l.156.17a6.75 6.75 0 009.682-.361" />
                             </svg>
                         </div>
-    
+
                         <div>
                             <h2 class="text-2xl font-bold text-slate-900">The Laws of Hooks</h2>
                         </div>
                     </div>
-    
+
                     <div class="grid grid-cols-1 gap-10 relative">
-    
+
                         <div class="space-y-4">
                             <div class="flex items-start gap-4">
                                 <div class="mt-1 bg-emerald-500 rounded-full p-1 shadow-sm shrink-0">
-                                    <svg class="h-3 w-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                                        stroke-width="4">
+                                    <svg class="h-3 w-3 text-white" fill="none" viewBox="0 0 24 24"
+                                        stroke="currentColor" stroke-width="4">
                                         <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
                                     </svg>
                                 </div>
-    
+
                                 <div class="space-y-1">
                                     <h4 class="font-bold text-amber-900 text-lg">1. Call at the Top Level</h4>
                                     <p class="text-slate-600 text-sm leading-relaxed">
-                                        Don’t call Hooks inside loops, conditions, or nested functions. Hooks must always be
+                                        Don’t call Hooks inside loops, conditions, or nested functions. Hooks must
+                                        always be
                                         called at the top of your React function.
                                     </p>
                                 </div>
                             </div>
-    
+
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-[13px]">
                                 <div class="bg-rose-50 border border-rose-100 rounded-xl p-4">
-                                    <span class="text-rose-600 font-bold uppercase text-[10px] tracking-widest block mb-2">❌
+                                    <span
+                                        class="text-rose-600 font-bold uppercase text-[10px] tracking-widest block mb-2">❌
                                         Incorrect</span>
                                     <code class="text-rose-800 block whitespace-pre">if (user) {
       useEffect(() => { ... });
     }</code>
                                 </div>
-    
-    
+
+
                                 <div class="bg-emerald-50 border border-emerald-100 rounded-xl p-4">
                                     <span
                                         class="text-emerald-600 font-bold uppercase text-[10px] tracking-widest block mb-2">✅
@@ -182,28 +189,30 @@
                                 </div>
                             </div>
                         </div>
-    
-    
+
+
                         <div class="space-y-4">
                             <div class="flex items-start gap-4">
                                 <div class="mt-1 bg-emerald-500 rounded-full p-1 shadow-sm shrink-0">
-                                    <svg class="h-3 w-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                                        stroke-width="4">
+                                    <svg class="h-3 w-3 text-white" fill="none" viewBox="0 0 24 24"
+                                        stroke="currentColor" stroke-width="4">
                                         <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
                                     </svg>
                                 </div>
                                 <div class="space-y-1">
                                     <h4 class="font-bold text-amber-900 text-lg">2. Only Call from React Functions</h4>
                                     <p class="text-slate-600 text-sm leading-relaxed">
-                                        Hooks can only be used in Function Components or Custom Hooks. They will not work in
+                                        Hooks can only be used in Function Components or Custom Hooks. They will not
+                                        work in
                                         regular JavaScript functions.
                                     </p>
                                 </div>
                             </div>
-    
+
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-[13px]">
                                 <div class="bg-rose-50 border border-rose-100 rounded-xl p-4">
-                                    <span class="text-rose-600 font-bold uppercase text-[10px] tracking-widest block mb-2">❌
+                                    <span
+                                        class="text-rose-600 font-bold uppercase text-[10px] tracking-widest block mb-2">❌
                                         Regular JS Function</span>
                                     <code class="text-rose-800 block whitespace-pre">function calculateData() {
       const [val] = useState(0); 
@@ -211,7 +220,7 @@
       return val * 2;
     }</code>
                                 </div>
-    
+
                                 <div class="bg-emerald-50 border border-emerald-100 rounded-xl p-4">
                                     <span
                                         class="text-emerald-600 font-bold uppercase text-[10px] tracking-widest block mb-2">✅
@@ -226,9 +235,9 @@
                                 </div>
                             </div>
                         </div>
-    
+
                     </div>
-    
+
                 </section>
             </div>
 
@@ -268,7 +277,8 @@
 
 
                 <!-- visual presentation -->
-                <div class="bg-indigo-50/50 p-1 rounded-[2rem] border border-indigo-100 overflow-hidden text-center md:text-left">
+                <div
+                    class="bg-indigo-50/50 p-1 rounded-[2rem] border border-indigo-100 overflow-hidden text-center md:text-left">
                     <div class="bg-white rounded-[1.8rem] p-8 flex flex-col md:flex-row items-center gap-8 shadow-sm">
                         <div class="flex-1 space-y-4">
                             <h4 class="text-[10px] font-black text-indigo-400 uppercase tracking-widest">Visual
@@ -350,13 +360,17 @@ const toggleLight = () => {
                     </div>
 
 
-                    <div class="bg-white p-8 rounded-[2rem] border border-slate-200 shadow-sm flex flex-col justify-center relative overflow-hidden">
-                        <h4 class="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] text-center mb-8">Component Memory</h4>
+                    <div
+                        class="bg-white p-8 rounded-[2rem] border border-slate-200 shadow-sm flex flex-col justify-center relative overflow-hidden">
+                        <h4 class="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] text-center mb-8">
+                            Component Memory</h4>
 
                         <div class="space-y-6 relative">
 
-                            <div class="relative flex items-center gap-5 p-3 rounded-2xl border border-dashed border-slate-400 opacity-50">
-                                <div class="relative z-10 w-10 h-10 rounded-2xl bg-slate-100 flex items-center justify-center text-slate-400 shrink-0">
+                            <div
+                                class="relative flex items-center gap-5 p-3 rounded-2xl border border-dashed border-slate-400 opacity-50">
+                                <div
+                                    class="relative z-10 w-10 h-10 rounded-2xl bg-slate-100 flex items-center justify-center text-slate-400 shrink-0">
                                     <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                             d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
@@ -365,22 +379,28 @@ const toggleLight = () => {
 
                                 <div class="flex-1">
                                     <div class="flex items-center gap-2 mb-0.5">
-                                        <span class="text-xs font-black text-slate-500 uppercase tracking-tighter">Normal Variable</span>
+                                        <span
+                                            class="text-xs font-black text-slate-500 uppercase tracking-tighter">Normal
+                                            Variable</span>
                                     </div>
                                     <p class="text-xs font-bold text-slate-400 line-through">Resets on Re-render</p>
                                 </div>
                             </div>
 
-                            <div class="relative flex items-center gap-5 p-3 rounded-2xl bg-indigo-600 shadow-xl shadow-indigo-100 transform transition">
-                                <div class="relative z-10 w-10 h-10 rounded-2xl bg-white/20 flex items-center justify-center text-white shrink-0">
+                            <div
+                                class="relative flex items-center gap-5 p-3 rounded-2xl bg-indigo-600 shadow-xl shadow-indigo-100 transform transition">
+                                <div
+                                    class="relative z-10 w-10 h-10 rounded-2xl bg-white/20 flex items-center justify-center text-white shrink-0">
                                     <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                            d="M5 13l4 4L19 7" />
                                     </svg>
                                 </div>
 
                                 <div class="flex-1">
                                     <div class="flex items-center gap-2 mb-0.5">
-                                        <span class="text-xs font-black text-white uppercase tracking-tighter">React State</span>
+                                        <span class="text-xs font-black text-white uppercase tracking-tighter">React
+                                            State</span>
                                     </div>
                                     <p class="text-xs font-black text-indigo-100">Preserved in Memory</p>
                                 </div>
@@ -388,7 +408,8 @@ const toggleLight = () => {
                         </div>
 
                         <div class="mt-2 pt-4 border-t border-slate-50 text-center">
-                            <span class="text-[11px] text-slate-400 font-bold italic tracking-wide">"React remembers, variables forget."</span>
+                            <span class="text-[11px] text-slate-400 font-bold italic tracking-wide">"React remembers,
+                                variables forget."</span>
                         </div>
                     </div>
                 </div>
@@ -428,33 +449,35 @@ const toggleLight = () => {
 
 
                 <!-- Visual Breakdown -->
-                <div class="bg-emerald-50/50 p-1 rounded-[2rem] border border-emerald-100 overflow-hidden">
+                <div class="bg-emerald-50/50 p-1 rounded-[2rem] border border-emerald-100 overflow-hidden text-center md:text-left">
                     <div class="bg-white rounded-[1.8rem] p-8 flex flex-col md:flex-row items-center gap-8 shadow-sm">
-
                         <div class="flex-1 space-y-4">
                             <h4 class="text-[10px] font-black text-emerald-500 uppercase tracking-widest">Visual Syntax
                                 Breakdown</h4>
 
-                            <div class="flex flex-wrap items-center gap-2 text-xl font-mono text-slate-800">
+                            <div
+                                class="flex flex-wrap items-center justify-center md:justify-start gap-2 text-xl font-mono text-slate-800">
                                 <span class="text-emerald-600">useEffect</span>
                                 <span class="text-slate-300">(</span>
                                 <div
                                     class="px-3 py-1 bg-emerald-500 text-white rounded-lg shadow-md shadow-emerald-100 text-sm">
-                                    () => { ... }</div>
+                                    () => { ... }
+                                </div>
                                 <span class="text-slate-300">,</span>
                                 <div
                                     class="px-3 py-1 bg-sky-500 text-white rounded-lg shadow-md shadow-sky-100 text-sm">
-                                    [deps]</div>
+                                    [deps]
+                                </div>
                                 <span class="text-slate-300">)</span>
                             </div>
 
-                            <div class="flex items-center gap-4 pt-4">
+                            <div class="flex items-center gap-4 pt-4 justify-center md:justify-start text-left">
                                 <div class="flex items-start gap-3">
                                     <div class="w-2 h-2 rounded-full bg-emerald-500 mt-1.5"></div>
                                     <div>
                                         <p class="text-xs font-black uppercase tracking-tighter text-emerald-600">The
                                             Action</p>
-                                        <p class="text-[10px] text-slate-500">The logic to run (Fetch, Timer, etc).</p>
+                                        <p class="text-[10px] text-slate-500">Check for rewards or change world.</p>
                                     </div>
                                 </div>
 
@@ -463,42 +486,43 @@ const toggleLight = () => {
                                     <div>
                                         <p class="text-xs font-black uppercase tracking-tighter text-sky-600">The
                                             Trigger</p>
-                                        <p class="text-[10px] text-slate-500">Only runs when these values change.</p>
+                                        <p class="text-[10px] text-slate-500">Run only when your score changes.</p>
                                     </div>
                                 </div>
                             </div>
+                            
                         </div>
-
                     </div>
                 </div>
 
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-                    <div class="space-y-6">
-                        <p class="text-slate-600 text-sm leading-relaxed">
-                            Think of `useEffect` as a <b>Smart Window</b>. By default, it's closed. But you can tell it
-                            to open and sync with the world whenever something inside your room (state) changes.
-                        </p>
+                    <div class="space-y-6 flex flex-col justify-center">
+                        <div class="space-y-2">
+                            <h4 class="text-xs font-black text-emerald-600 uppercase tracking-widest">Mental Model</h4>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                Think of `useEffect` as an <b>Auto-Leveler</b>. It sits in the background and waits.
+                                Whenever you gain a point, it automatically checks: "Do we need to level up now?"
+                            </p>
+                        </div>
 
-                        <div class="p-6 bg-slate-900 rounded-[2rem] relative overflow-hidden group">
+                        <div class="p-6 bg-slate-900 rounded-[2rem] relative overflow-hidden group shadow-2xl">
                             <div
-                                class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-30 transition-opacity duration-300">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-16 text-emerald-400" fill="none"
-                                    viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m12.728 0l-.707-.707M6.343 6.343l-.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z" />
+                                class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-30 transition-opacity duration-300 text-emerald-400">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12" fill="currentColor"
+                                    viewBox="0 0 20 20">
+                                    <path
+                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                                 </svg>
                             </div>
-                            <pre class="text-xs text-emerald-300"><code>useEffect(() => {
-  <span class="text-slate-400">// 1. Open Window (Setup)</span>
-  console.log("Syncing...");
+                            <pre class="text-xs font-mono leading-relaxed"><code class="text-emerald-300">useEffect(() => {
+  <span class="text-slate-500">// Check for level up</span>
+  if (score >= 100) setLevel(2);
 
-  return () => {
-    <span class="text-slate-400">// 2. Close Window (Cleanup)</span>
-    console.log("Cleaning up...");
-  };
+  <span class="text-slate-500">// Cleanup (runs before next update)</span>
+  return () => console.log("Cleaning up!");
 
-}, [weather]); // Only when weather changes!</code></pre>
+}, [score]); <span class="text-slate-500">// Watch ONLY the score</span></code></pre>
                         </div>
                     </div>
 
@@ -508,56 +532,68 @@ const toggleLight = () => {
                         <h4 class="text-[10px] font-black text-slate-400 uppercase tracking-[0.3em] text-center mb-4">
                             The Component Life Path</h4>
 
-                        <div class="relative">
-                            <!-- Vertical Line -->
-                            <div class="absolute left-[11px] top-4 bottom-4 w-0.5 bg-slate-100"></div>
+                        <div class="space-y-12 relative">
+                            <!-- Connecting Line -->
+                            <div class="absolute left-[1.25rem] top-2 bottom-2 w-0.5 bg-slate-100"></div>
 
-                            <div class="space-y-8 relative">
-                                <!-- Stage 1 -->
-                                <div class="flex items-start gap-4 group">
-                                    <div
-                                        class="w-6 h-6 rounded-full bg-emerald-500 flex items-center justify-center text-[10px] text-white font-bold shrink-0 z-10 shadow-lg shadow-emerald-100 ring-4 ring-white">
-                                        1</div>
-                                    <div class="space-y-1">
-                                        <h5 class="text-xs font-black text-emerald-800 uppercase tracking-tight">The
-                                            Birth (Mount)</h5>
-                                        <p class="text-[10px] text-slate-500 leading-relaxed max-w-[200px]">The
-                                            component appears on screen. `useEffect` runs its code for the <span
-                                                class="font-bold text-emerald-600">first time</span>.</p>
-                                    </div>
+                            <!-- Step 1 -->
+                            <div class="relative flex gap-6 items-start">
+                                <div
+                                    class="w-10 h-10 rounded-xl bg-emerald-600 flex items-center justify-center text-white shadow-lg shadow-emerald-200 z-10 shrink-0">
+                                    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                            d="M12 4v16m8-8H4" />
+                                    </svg>
                                 </div>
-
-                                <!-- Stage 2 -->
-                                <div class="flex items-start gap-4 group">
-                                    <div
-                                        class="w-6 h-6 rounded-full bg-sky-500 flex items-center justify-center text-[10px] text-white font-bold shrink-0 z-10 shadow-lg shadow-sky-100 ring-4 ring-white">
-                                        2</div>
-                                    <div class="space-y-1">
-                                        <h5 class="text-xs font-black text-sky-800 uppercase tracking-tight">The Growth
-                                            (Update)</h5>
-                                        <p class="text-[10px] text-slate-500 leading-relaxed max-w-[200px]">A state in
-                                            your dependency array changes. React <span
-                                                class="font-bold text-sky-600">re-runs</span> the effect to keep
-                                            everything in sync.</p>
-                                    </div>
-                                </div>
-
-                                <!-- Stage 3 -->
-                                <div class="flex items-start gap-4 group">
-                                    <div
-                                        class="w-6 h-6 rounded-full bg-rose-500 flex items-center justify-center text-[10px] text-white font-bold shrink-0 z-10 shadow-lg shadow-rose-100 ring-4 ring-white">
-                                        3</div>
-                                    <div class="space-y-1">
-                                        <h5 class="text-xs font-black text-rose-800 uppercase tracking-tight">The Exit
-                                            (Unmount)</h5>
-                                        <p class="text-[10px] text-slate-500 leading-relaxed max-w-[200px]">Component
-                                            leaves the screen. The <span class="font-bold text-rose-600">Cleanup
-                                                Function</span> runs to stop timers or close connections.</p>
-                                    </div>
+                                <div>
+                                    <h5 class="text-xs font-black text-slate-800 uppercase tracking-tight">The Birth
+                                        (Mount)</h5>
+                                    <p class="text-[11px] text-slate-500 mt-1 leading-relaxed">The very first time the
+                                        component appears. The effect <span
+                                            class="font-bold text-emerald-600 uppercase">runs once</span> automatically.
+                                    </p>
                                 </div>
                             </div>
 
+                            <!-- Step 2 -->
+                            <div class="relative flex gap-6 items-start">
+                                <div
+                                    class="w-10 h-10 rounded-xl bg-sky-500 flex items-center justify-center text-white shadow-lg shadow-sky-200 z-10 shrink-0">
+                                    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                            d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h5 class="text-xs font-black text-slate-800 uppercase tracking-tight">The Update
+                                        (Sync)</h5>
+                                    <p class="text-[11px] text-slate-500 mt-1 leading-relaxed">Whenever <span
+                                            class="text-sky-600 font-mono font-bold">[score]</span> changes, the effect
+                                        <span class="font-bold text-sky-600 uppercase">re-runs</span> to keep things in
+                                        sync.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Step 3 -->
+                            <div class="relative flex gap-6 items-start">
+                                <div
+                                    class="w-10 h-10 rounded-xl bg-rose-500 flex items-center justify-center text-white shadow-lg shadow-rose-200 z-10 shrink-0">
+                                    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                            d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h5 class="text-xs font-black text-slate-800 uppercase tracking-tight">The Exit
+                                        (Cleanup)</h5>
+                                    <p class="text-[11px] text-slate-500 mt-1 leading-relaxed">Before the component
+                                        leaves, the <span class="font-bold text-rose-600 uppercase">Return
+                                            Function</span> runs to stop timers or save data.</p>
+                                </div>
+                            </div>
                         </div>
+
                     </div>
                 </div>
 
