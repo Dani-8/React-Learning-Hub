@@ -1,3 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Plus+Jakarta+Sans:wght@400;600;800&display=swap');
+
+html,
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* ---------------------------------------------- */
+/* ---------------------------------------------- */
+
 .glass {
     background: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(12px);
@@ -8,4 +19,16 @@
     height: 1px;
     background: linear-gradient(to right, transparent, #e2e8f0, transparent);
     margin: 4rem 0;
+}
+
+
+
+.nav-link.active {
+    transition: 0.5s ease;
+    color: #6366f1;
+}
+
+.nav-link.active span {
+    background-color: #6366f1 !important;
+    transition: 0.5s ease;
 }
