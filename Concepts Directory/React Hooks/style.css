@@ -38,6 +38,7 @@ pre {
 
 .nav-link.active span {
     background-color: #6366f1 !important;
+    transform: scale(1.5);
     transition: 0.5s ease;
 }
 

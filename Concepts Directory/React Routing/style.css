@@ -24,11 +24,12 @@ body {
 
 
 .nav-link.active {
+    color: #10b981;
     transition: 0.5s ease;
-    color: #6366f1;
 }
 
 .nav-link.active span {
-    background-color: #6366f1 !important;
+    background-color: #10b981;
+    transform: scale(1.5);
     transition: 0.5s ease;
 }
