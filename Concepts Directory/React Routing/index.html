@@ -110,7 +110,7 @@
 
 
         <!-- Main Content -->
-        <main class="space-y-24 flex-1 mb-40">
+        <main class="space-y-20 flex-1 mb-40">
             <!-- Header -->
             <section class="space-y-6">
                 <div
@@ -190,74 +190,89 @@
                 </div>
 
                 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
-                <!-- Left col: Logic -->
-                <div class="space-y-6">
-                    <div class="space-y-3">
-                        <h4 class="text-[10px] font-black text-emerald-600 uppercase tracking-widest">The Mental Model</h4>
-                        <p class="text-slate-600 text-sm leading-relaxed">
-                            In a traditional site, clicking a link fetches a new HTML file. In an <b class="text-emerald-600">SPA</b>, the page never reloads. React simply swaps components in and out.
-                        </p>
-                    </div>
-                    
-                    <div class="relative overflow-hidden bg-slate-900 rounded-[2rem] border border-slate-800 shadow-2xl">
-                        <div class="flex items-center justify-between px-6 py-3 border-b border-slate-800 bg-slate-900/50">
-                            <span class="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Execution Flow</span>
-                            <div class="flex gap-1.5">
-                                <div class="w-2 h-2 rounded-full bg-slate-700"></div>
-                                <div class="w-2 h-2 rounded-full bg-slate-700"></div>
-                            </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+                    <!-- Left col: Logic -->
+                    <div class="space-y-6">
+                        <div class="space-y-3">
+                            <h4 class="text-[10px] font-black text-emerald-600 uppercase tracking-widest">The Mental Model</h4>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                In a traditional site, clicking a link fetches a new HTML file. In an <b class="text-emerald-600">SPA</b>, the page never reloads. React simply swaps components in and out.
+                            </p>
                         </div>
-                        <div class="p-6 font-mono text-xs leading-relaxed">
-                            <div class="flex items-start gap-4 mb-4 opacity-50">
-                                <span class="text-slate-600">OLD</span>
-                                <code class="text-slate-400">Request -> Server -> New HTML</code>
+                        
+                        <div class="relative overflow-hidden bg-slate-900 rounded-[2rem] border border-slate-800 shadow-2xl">
+                            <div class="flex items-center justify-between px-6 py-4 border-b border-slate-800 bg-slate-900/50">
+                                <span class="text-[10px] font-bold text-slate-500 uppercase tracking-widest">The Process</span>
+                                <div class="flex gap-1.5">
+                                    <div class="w-2 h-2 rounded-full bg-emerald-400/60"></div>
+                                    <div class="w-2 h-2 rounded-full bg-slate-600"></div>
+                                </div>
                             </div>
-                            <div class="flex items-start gap-4 p-3 bg-emerald-500/10 rounded-xl border border-emerald-500/20">
-                                <span class="text-emerald-500 font-bold">SPA</span>
-                                <code class="text-emerald-300">Link Click -> Component Swap</code>
-                            </div>
-                            <div class="mt-4 pl-12 space-y-1">
-                                <div class="text-slate-500">└─ No Tab Spinning</div>
-                                <div class="text-slate-500">└─ No Data Loss</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
+                            <div class="p-8 space-y-6">
+                                <!-- Step 1 -->
+                                <div class="flex items-center gap-4">
+                                    <div class="flex-shrink-0 w-6 h-6 rounded-full border border-slate-700 flex items-center justify-center text-[10px] font-bold text-slate-500">1</div>
+                                    <div class="h-px flex-1 bg-slate-800"></div>
+                                    <span class="text-xs font-mono text-slate-400">Catch the Click</span>
+                                </div>
+                                <!-- Step 2 -->
+                                <div class="flex items-center gap-4">
+                                    <div class="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-500/20 border border-emerald-500/50 flex items-center justify-center text-[10px] font-bold text-emerald-400">2</div>
+                                    <div class="h-px flex-1 bg-emerald-500/20"></div>
+                                    <span class="text-xs font-mono text-emerald-400 italic">Swap Component</span>
+                                </div>
+                                <!-- Step 3 -->
+                                <div class="flex items-center gap-4">
+                                    <div class="flex-shrink-0 w-6 h-6 rounded-full border border-slate-700 flex items-center justify-center text-[10px] font-bold text-slate-500">3</div>
+                                    <div class="h-px flex-1 bg-slate-800"></div>
+                                    <span class="text-xs font-mono text-slate-400">Update the Link</span>
+                                </div>
 
-                <!-- Right col: Experience -->
-                <div class="flex flex-col gap-4">
-                    <h4 class="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-2">User Experience</h4>
-                    
-                    <!-- Fast Transition Card -->
-                    <div class="group relative bg-white border border-slate-200 p-6 rounded-[2rem] shadow-sm hover:border-emerald-200 transition-all">
-                        <div class="flex items-start gap-5">
-                            <div class="flex-shrink-0 w-12 h-12 rounded-2xl bg-emerald-500 text-white flex items-center justify-center shadow-lg shadow-emerald-100">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                                </svg>
-                            </div>
-                            
-                            <div class="space-y-1">
-                                <h5 class="text-sm font-black text-slate-900 uppercase tracking-tight">Zero Latency</h5>
-                                <p class="text-xs text-slate-500 leading-snug">Navigation happens instantly. No white flashes or waiting for the browser to reload.</p>
+                                
+                                <div class="mt-6 pt-6 border-t border-slate-800">
+                                    <p class="text-[10px] text-slate-400 leading-relaxed italic">
+                                        Result: It feels like a new page, but you never actually left the first one.
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- State Persistence Card -->
-                    <div class="group relative bg-white border border-slate-200 p-6 rounded-[2rem] shadow-sm hover:border-emerald-200 transition-all">
-                        <div class="flex items-start gap-5">
-                            <div class="flex-shrink-0 w-12 h-12 rounded-2xl bg-slate-900 text-emerald-400 flex items-center justify-center shadow-lg shadow-slate-200">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
-                                </svg>
-                            </div>
 
-                            <div class="space-y-1">
-                                <h5 class="text-sm font-black text-slate-900 uppercase tracking-tight">Memory retention</h5>
-                                <p class="text-xs text-slate-500 leading-snug">Items in a shopping cart or text in a search bar stay exactly where they are as you switch pages.</p>
+                    <!-- Right col: Experience -->
+                    <div class="flex flex-col gap-4">
+                        <h4 class="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-2">User Experience</h4>
+                        
+                        <!-- Fast Transition Card -->
+                        <div class="group relative bg-white border border-slate-200 p-6 rounded-[2rem] shadow-sm hover:border-emerald-200 transition-all">
+                            <div class="flex items-start gap-5">
+                                <div class="flex-shrink-0 w-12 h-12 rounded-2xl bg-emerald-500 text-white flex items-center justify-center shadow-lg shadow-emerald-100">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                    </svg>
+                                </div>
+                                
+                                <div class="space-y-1">
+                                    <h5 class="text-sm font-black text-slate-900 uppercase tracking-tight">Zero Waiting</h5>
+                                    <p class="text-xs text-slate-500 leading-snug">Navigation happens instantly. No white flashes or waiting for the browser to reload.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- State Persistence Card -->
+                        <div class="group relative bg-white border border-slate-200 p-6 rounded-[2rem] shadow-sm hover:border-emerald-200 transition-all">
+                            <div class="flex items-start gap-5">
+                                <div class="flex-shrink-0 w-12 h-12 rounded-2xl bg-slate-900 text-emerald-400 flex items-center justify-center shadow-lg shadow-slate-200">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                                    </svg>
+                                </div>
+
+                                <div class="space-y-1">
+                                    <h5 class="text-sm font-black text-slate-900 uppercase tracking-tight">Memory retention</h5>
+                                    <p class="text-xs text-slate-500 leading-snug">Items in a shopping cart or text in a search bar stay exactly where they are as you switch pages.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -271,77 +286,89 @@
             <!-- Router Components Section -->
             <section id="components" class="hook-section space-y-10">
                 <div class="flex items-center gap-4">
-                    <div
-                        class="w-12 h-12 rounded-2xl bg-teal-50 text-teal-600 flex items-center justify-center font-black text-xl">
-                        03</div>
+                    <div class="w-12 h-12 rounded-2xl bg-teal-50 text-teal-600 flex items-center justify-center font-black text-xl">03</div>
+
                     <h2 class="text-3xl font-bold text-slate-900">Routes & BrowserRouter</h2>
                 </div>
-
+                
+                <!-- Hierarchy -->
                 <div class="bg-emerald-50/50 p-1 rounded-[2rem] border border-emerald-100 overflow-hidden">
                     <div class="bg-white rounded-[1.8rem] p-8 flex flex-col md:row items-center gap-8 shadow-sm">
                         <div class="flex-1 space-y-4 w-full">
-                            <h4 class="text-[10px] font-black text-emerald-500 uppercase tracking-widest">Visual
-                                Component Hierarchy</h4>
+                            <h4 class="text-[10px] font-black text-emerald-500 uppercase tracking-widest border-b-2 pb-1">Visual Component Hierarchy</h4>
+
                             <div class="flex flex-wrap items-center gap-2 text-lg font-mono text-slate-800">
                                 <span class="text-emerald-600 font-bold">BrowserRouter</span>
                                 <span class="text-slate-300">→</span>
-                                <div
-                                    class="px-3 py-1 bg-emerald-500 text-white rounded-lg text-sm shadow-md shadow-emerald-100">
-                                    Routes</div>
+                                <div class="px-3 py-1 bg-emerald-600 text-white rounded-lg text-sm shadow-md shadow-emerald-100">Routes</div>
                                 <span class="text-slate-300">→</span>
-                                <div
-                                    class="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm shadow-md shadow-teal-100">
-                                    Route path="/..."</div>
+                                <div class="px-3 py-1 bg-teal-700 text-white rounded-lg text-sm shadow-md shadow-teal-100">Route path="/..."</div>
                             </div>
+
+
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
                                 <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
                                     <p class="text-xs font-black text-emerald-600 uppercase">BrowserRouter</p>
                                     <p class="text-[10px] text-slate-500">The parent that enables navigation history.
                                     </p>
                                 </div>
+
                                 <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
                                     <p class="text-xs font-black text-teal-600 uppercase">Routes</p>
-                                    <p class="text-[10px] text-slate-500">The container that picks the best matching
-                                        URL.</p>
+                                    <p class="text-[10px] text-slate-500">The container that picks the best matching URL.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
+                
+                <!-- Context-->
+                <div class="space-y-3 max-w-2xl px-2">
+                    <h4 class="text-[10px] font-black text-emerald-600 uppercase tracking-widest">How it works</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        To start routing, you wrap your entire app in the <b class="text-slate-900">BrowserRouter</b>. This monitors the URL and tells React which component to show based on the path.
+                    </p>
+                </div>
 
-                <section class="bg-emerald-950 p-8 md:p-14 rounded-[3.5rem] text-center space-y-10 shadow-2xl">
-                    <div class="space-y-2">
-                        <h3 class="text-xs font-black text-emerald-400 tracking-[0.4em] uppercase">Control Center</h3>
-                        <h2 class="text-3xl font-extrabold text-white tracking-tight">The Router Trio</h2>
-                    </div>
 
-                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
-                        <div class="p-6 bg-white/5 border border-white/5 rounded-[2rem] text-left">
-                            <div
-                                class="w-10 h-10 rounded-xl bg-emerald-500/10 flex items-center justify-center mb-4 text-emerald-400">
-                                1</div>
-                            <h4 class="font-bold text-white text-sm">BrowserRouter</h4>
-                            <p class="text-[10px] text-emerald-400 uppercase font-black tracking-widest">The Engine</p>
+                <!-- Code implem... -->
+                <div class="bg-slate-900 rounded-3xl overflow-hidden shadow-xl border border-slate-800">
+                    <div class="flex items-center justify-between px-5 py-2 border-b border-slate-800 bg-slate-900/50">
+                        <div class="flex  items-center gap-4">
+                            <div class="flex gap-1">
+                                <div class="w-2 h-2 rounded-full bg-emerald-400/50"></div>
+                                <div class="w-2 h-2 rounded-full bg-emerald-400/30"></div>
+                                <div class="w-2 h-2 rounded-full bg-slate-600"></div>
+                            </div>
+                            <span class="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Basic Setup</span>
                         </div>
-                        <div class="p-6 bg-white/5 border border-white/5 rounded-[2rem] text-left">
-                            <div
-                                class="w-10 h-10 rounded-xl bg-teal-500/10 flex items-center justify-center mb-4 text-teal-400">
-                                2</div>
-                            <h4 class="font-bold text-white text-sm">Routes</h4>
-                            <p class="text-[10px] text-teal-400 uppercase font-black tracking-widest">The Switchboard
-                            </p>
+                        <span class="text-emerald-500 text-[10px]">App.jsx</span>
+                    </div>
+                        
+
+                    <div class="p-6 font-mono text-[13px] leading-relaxed overflow-x-auto">
+                        <div class="mb-4">
+                            <span class="text-emerald-400">import</span> <span class="text-slate-300">{ BrowserRouter, Routes, Route }</span> <span class="text-emerald-400">from</span> <span class="text-amber-200">'react-router-dom'</span>;<br>
+                            <span class="text-emerald-400">import</span> <span class="text-slate-300">Home</span> <span class="text-emerald-400">from</span> <span class="text-amber-200">'./components/Home'</span>;<br>
+                            <span class="text-emerald-400">import</span> <span class="text-slate-300">About</span> <span class="text-emerald-400">from</span> <span class="text-amber-200">'./components/About'</span>;
                         </div>
-                        <div class="p-6 bg-white/5 border border-white/5 rounded-[2rem] text-left">
-                            <div
-                                class="w-10 h-10 rounded-xl bg-lime-500/10 flex items-center justify-center mb-4 text-lime-400">
-                                3</div>
-                            <h4 class="font-bold text-white text-sm">Route</h4>
-                            <p class="text-[10px] text-lime-400 uppercase font-black tracking-widest">The Destination
-                            </p>
+
+                        <div class="text-slate-400">
+                            <span class="text-emerald-500">function</span> <span class="text-blue-400">App</span>() {<br>
+                            &nbsp;&nbsp;<span class="text-emerald-500 italic">return</span> (<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-emerald-600">&lt;BrowserRouter&gt;</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-emerald-500">&lt;Routes&gt;</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-teal-400">&lt;Route</span> <span class="text-amber-400">path</span>=<span class="text-amber-200">"/"</span> <span class="text-amber-400">element</span>={<span class="text-slate-300">&lt;Home /&gt;</span>} <span class="text-teal-400">/&gt;</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-teal-400">&lt;Route</span> <span class="text-amber-400">path</span>=<span class="text-amber-200">"/about"</span> <span class="text-amber-400">element</span>={<span class="text-slate-300">&lt;About /&gt;</span>} <span class="text-teal-400">/&gt;</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-emerald-500">&lt;/Routes&gt;</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-emerald-600">&lt;/BrowserRouter&gt;</span><br>
+                            &nbsp;&nbsp;);<br>
+                            }
                         </div>
                     </div>
-                </section>
+                </div>
+
             </section>
         </main>
     </div>
