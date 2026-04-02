@@ -3,7 +3,7 @@ window.addEventListener('scroll', () => {
     const navLinks = document.querySelectorAll('.nav-link')
     let current = "";
     sections.forEach(section => {
-        if (window.pageYOffset >= section.offsetTop - 250) {
+        if (window.pageYOffset >= section.offsetTop - 270) {
             current = section.getAttribute('id')
         }
     })

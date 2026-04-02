@@ -16,7 +16,7 @@ body {
 
 .module-divider {
     height: 1px;
-    background: linear-gradient(to right, transparent, #e2e8f0, transparent);
+    background: linear-gradient(to right, transparent, #cad2dc, transparent);
     margin: 4rem 0;
 }
 

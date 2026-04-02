@@ -370,6 +370,91 @@
                 </div>
 
             </section>
+
+            
+            <div class="module-divider"></div>
+
+            
+            <!-- Link vs NavLink Section -->
+            <section id="links" class="hook-section space-y-10">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center font-black text-xl shadow-sm">
+                        04
+                    </div>
+                    <h2 class="text-3xl font-bold text-slate-900 tracking-tight">Link & NavLink</h2>
+                </div>
+
+
+                <!-- Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Link Card -->
+                    <div class="p-8 bg-white border border-slate-200 rounded-[2rem] space-y-4 shadow-sm hover:border-blue-200 transition-colors">
+                        <div class="flex justify-between items-center">
+                            <h3 class="font-bold text-lg text-slate-800">The &lt;Link&gt; Tag</h3>
+                            <span class="px-2 py-0.5 bg-slate-100 text-[10px] font-bold text-slate-500 rounded uppercase">Standard</span>
+                        </div>
+                        <p class="text-sm text-slate-500 leading-relaxed text-pretty">
+                            Use this instead of <code class="text-blue-600 font-bold">&lt;a&gt;</code> tags. It stops the page from refreshing, keeping your data and state alive.
+                        </p>
+                        <div class="bg-slate-900 p-4 rounded-2xl border border-slate-800">
+                            <code class="text-blue-300 text-xs font-mono">&lt;Link to="/profile"&gt;Profile&lt;/Link&gt;</code>
+                        </div>
+                    </div>
+
+                    <!-- NavLink Card -->
+                    <div class="p-8 bg-blue-50/50 border border-blue-100 rounded-[2rem] space-y-4 shadow-sm hover:border-blue-300 transition-colors">
+                        <div class="flex justify-between items-center">
+                            <h3 class="font-bold text-lg text-blue-900">The &lt;NavLink&gt; Tag</h3>
+                            <span class="px-2 py-0.5 bg-blue-500 text-[10px] font-bold text-white rounded uppercase">Smart</span>
+                        </div>
+                        <p class="text-sm text-slate-600 leading-relaxed text-pretty">
+                            Same as Link, but it knows if you are currently on that page. Perfect for highlighing the "Active" button in a menu.
+                        </p>
+                        <div class="bg-slate-900 p-4 rounded-2xl border border-slate-800">
+                            <code class="text-emerald-400 text-xs font-mono">&lt;NavLink className={({ isActive }) => ...} /&gt;</code>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Visual Example -->
+                <div class="bg-white border border-slate-200 rounded-[2.5rem] p-8 space-y-6">
+                    <h4 class="text-[10px] font-black text-blue-500 uppercase tracking-widest text-center">Visual Difference</h4>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                        <!-- Link Result -->
+                        <div class="flex flex-col items-center gap-2">
+                            <div class="px-6 py-2 bg-slate-100 text-slate-400 text-sm font-bold rounded-full border border-transparent">
+                                About Us
+                            </div>
+                            <span class="text-[9px] font-bold text-slate-400 uppercase italic">&lt;Link&gt; (Always looks same)</span>
+                        </div>
+
+                        <div class="hidden sm:block text-slate-200">|</div>
+
+                        <!-- NavLink Result -->
+                        <div class="flex flex-col items-center gap-2">
+                            <div class="px-6 py-2 bg-blue-600 text-white text-sm font-bold rounded-full shadow-lg shadow-blue-100">
+                                About Us
+                            </div>
+                            <span class="text-[9px] font-bold text-blue-500 uppercase italic">&lt;NavLink&gt; (Auto-highlights)</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            
+            <div class="module-divider"></div>
+
+            
+            
+
+
+
+
+
+
+
         </main>
     </div>
 
