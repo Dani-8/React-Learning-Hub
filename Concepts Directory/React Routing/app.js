@@ -17,6 +17,41 @@ window.addEventListener('scroll', () => {
 
 
 
+// --------------------
+// --------------------
+// --------------------
+
+
+function simulateNavigate() {
+    document.getElementById('browser-url').innerHTML = '/'
+
+    const detail = document.getElementById('content-detail')
+    const home = document.getElementById('content-home')
+
+    detail.classList.add('opacity-0')
+
+    setTimeout(() => {
+        detail.classList.add('hidden');
+        home.classList.remove('hidden');
+        setTimeout(() => home.classList.remove('opacity-0'), 10)
+    }, 300);
+}
+
+function resetSimulate() {
+    document.getElementById('browser-url').innerHTML = '/user/<span class="text-indigo-400 font-bold">99</span>'
+    
+    const detail = document.getElementById('content-detail')
+    const home = document.getElementById('content-home')
+
+    home.classList.add('opacity-0')
+
+    setTimeout(() => {
+        home.classList.add('hidden');
+        detail.classList.remove('hidden');
+        setTimeout(() => detail.classList.remove('opacity-0'), 10);
+    }, 300);
+}
+
 
 
 
