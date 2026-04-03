@@ -25,7 +25,6 @@
 }
 
 body {
-    font-family: 'Plus Jakarta Sans', sans-serif;
     background-color: var(--bg-color);
     color: var(--text-main);
     transition: 0.3s ease;

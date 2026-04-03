@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Plus+Jakarta+Sans:wght@400;600;800&display=swap');
 html, body{
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    /* font-family: 'Plus Jakarta Sans', sans-serif; */
     scroll-behavior: smooth;
     background-color: rgb(246, 249, 252);
 }
