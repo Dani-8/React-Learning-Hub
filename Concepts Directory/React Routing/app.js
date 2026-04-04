@@ -16,7 +16,6 @@ window.addEventListener('scroll', () => {
 })
 
 
-
 // --------------------
 // --------------------
 // --------------------
@@ -51,10 +50,4 @@ function resetSimulate() {
         setTimeout(() => detail.classList.remove('opacity-0'), 10);
     }, 300);
 }
-
-
-
-
-
-
 
