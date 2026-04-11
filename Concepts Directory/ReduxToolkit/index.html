@@ -100,7 +100,7 @@
         </aside>
 
 
-        <main class="space-y-32 flex-1 mb-40">
+        <main class="space-y-20 flex-1 mb-40">
 
             <!-- Header -->
             <section class="space-y-6">
@@ -121,7 +121,7 @@
 
 
             <!-- 00. Introduction -->
-            <section id="intro" class="max-w-6xl mx-auto space-y-10">
+            <section id="intro" class="hook-section space-y-10">
                 <!-- Header -->
                 <div class="flex items-center gap-6">
                     <div class="px-5 py-2 rounded-2xl bg-violet-100 text-violet-700 font-black text-lg">00</div>
@@ -214,6 +214,58 @@
                     </div>
                 </div>
             </section>
+
+
+            <div class="module-divider"></div>
+
+            
+            <!-- 01. Installation Section -->
+            <section id="install" class="hook-section space-y-10">
+                <div class="flex items-center gap-6">
+                    <div class="px-5 py-2 rounded-2xl bg-slate-200 text-slate-900 font-black text-lg shadow-xl shadow-slate-300">01</div>
+                    <h2 class="text-4xl font-black text-slate-900">Get the SDK</h2>
+                </div>
+                
+                <div class="bg-white p-10 rounded-[3rem] border-2 border-slate-100 hover:border-violet-500/50 transition-all duration-300 shadow-sm">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 divide-y md:divide-y-0 md:divide-x divide-slate-100">
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-3">
+                                <div class="w-2 h-6 bg-violet-500 rounded-full"></div>
+                                <h3 class="text-xl font-bold text-slate-900">@reduxjs/toolkit</h3>
+                            </div>
+
+                            <p class="text-sm text-slate-500 leading-relaxed">
+                                Includes everything needed to manage state: <b>reducers, actions, and thunks</b>. It's the logic engine.
+                            </p>
+                        </div>
+
+                        <div class="space-y-4 md:pl-12 pt-8 md:pt-0">
+                            <div class="flex items-center gap-3">
+                                <div class="w-2 h-6 bg-blue-500 rounded-full"></div>
+                                <h3 class="text-xl font-bold text-slate-900">react-redux</h3>
+                            </div>
+
+                            <p class="text-sm text-slate-500 leading-relaxed">
+                                The <b>bridge</b> that connects your React components to the Redux store. It lets components "talk" to data.
+                            </p>
+                        </div>
+                    </div>
+                    
+
+                    <div class="mt-10 bg-slate-900 p-6 rounded-3xl flex flex-col md:flex-row items-center justify-between gap-4 border border-slate-800">
+                        <div class="flex items-center gap-4">
+                            <code class="text-violet-400 font-mono text-sm font-bold">npm i @reduxjs/toolkit react-redux</code>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            
+            <div class="module-divider"></div>
+
+
+
+
 
 
         </main>
