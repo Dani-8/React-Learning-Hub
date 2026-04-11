@@ -120,6 +120,101 @@
             </section>
 
 
+            <!-- 00. Introduction -->
+            <section id="intro" class="max-w-6xl mx-auto space-y-10">
+                <!-- Header -->
+                <div class="flex items-center gap-6">
+                    <div class="px-5 py-2 rounded-2xl bg-violet-100 text-violet-700 font-black text-lg">00</div>
+                    <h2 class="text-4xl font-black text-slate-900 tracking-tight">Why Redux Toolkit?</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- The Problem Card -->
+                    <div class="p-10 bg-white border border-slate-200 rounded-[2.5rem] concept-card border-1 border-red-400 hover:border-red-500 transition-all duration-300">
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-2 h-8 bg-red-500 rounded-full"></div>
+                            <h4 class="font-bold text-slate-900 text-xl tracking-tight uppercase text-sm">The Problem</h4>
+                        </div>
+                        <p class="text-slate-600 leading-relaxed font-sm mb-8">
+                            Traditional Redux required heavy boilerplate (Action Types, Creators, Reducers) and manual setup for things like DevTools or Thunks.
+                        </p>
+                        
+                        <div class="space-y-4">
+                            <div class="flex gap-4 p-4 rounded-2xl bg-slate-50 border border-slate-100">
+                                <div class="font-bold text-red-500 text-xs shrink-0 mt-1">01</div>
+                                <div>
+                                    <p class="text-sm font-bold">Complex Setup</p>
+                                    <p class="text-xs text-slate-500">Too much configuration just to start.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 p-4 rounded-2xl bg-slate-50 border border-slate-100">
+                                <div class="font-bold text-red-500 text-xs shrink-0 mt-1">02</div>
+                                <div>
+                                    <p class="text-sm font-bold">Manual Immutability</p>
+                                    <p class="text-xs text-slate-500">One tiny mistake in copying state breaks the app.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 p-4 rounded-2xl bg-slate-50 border border-slate-100">
+                                <div class="font-bold text-red-500 text-xs shrink-0 mt-1">03</div>
+                                <div>
+                                    <p class="text-sm font-bold">Too Many Files</p>
+                                    <p class="text-xs text-slate-500">Jumping between 4 files for one simple feature.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 p-4 rounded-2xl bg-slate-50 border border-slate-100">
+                                <div class="font-bold text-red-500 text-xs shrink-0 mt-1">04</div>
+                                <div>
+                                    <p class="text-sm font-bold">Store Verbosity</p>
+                                    <p class="text-xs text-slate-500">Writing huge code blocks for small data changes.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- The Solution Card -->
+                    <div class="p-10 bg-slate-900 text-white rounded-[2.5rem] concept-card shadow-2xl shadow-violet-200/50 hover:shadow-violet-400/70 transition-all duration-300">
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-2 h-8 bg-violet-500 rounded-full"></div>
+                            <h4 class="font-bold text-white text-xl tracking-tight uppercase text-sm">The Solution: RTK</h4>
+                        </div>
+                        <p class="text-slate-300 leading-relaxed font-sm mb-8">
+                            Redux Toolkit is the official, opinionated toolset. It handles immutability, reduces code by 40%, and comes pre-configured for speed.
+                        </p>
+
+                        <div class="space-y-4">
+                            <div class="flex gap-4 p-4 rounded-2xl bg-white/5 border border-white/10 group hover:border-violet-500/50 transition-colors">
+                                <div class="font-bold text-violet-400 text-xs shrink-0 mt-1">01</div>
+                                <div>
+                                    <p class="text-sm font-bold">Store (for data)</p>
+                                    <p class="text-xs text-slate-400">The "Big Warehouse" where all your app data lives safely.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 p-4 rounded-2xl bg-white/5 border border-white/10 group hover:border-violet-500/50 transition-colors">
+                                <div class="font-bold text-violet-400 text-xs shrink-0 mt-1">02</div>
+                                <div>
+                                    <p class="text-sm font-bold">Slice (feature logic)</p>
+                                    <p class="text-xs text-slate-400">A small "box" that keeps one feature's data and logic together.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 p-4 rounded-2xl bg-white/5 border border-white/10 group hover:border-violet-500/50 transition-colors">
+                                <div class="font-bold text-violet-400 text-xs shrink-0 mt-1">03</div>
+                                <div>
+                                    <p class="text-sm font-bold">Less Setup / Less Code</p>
+                                    <p class="text-xs text-slate-400">Smart shortcuts that do the heavy lifting for you.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 p-4 rounded-2xl bg-white/5 border border-white/10 group hover:border-violet-500/50 transition-colors">
+                                <div class="font-bold text-violet-400 text-xs shrink-0 mt-1">04</div>
+                                <div>
+                                    <p class="text-sm font-bold">Better Structure</p>
+                                    <p class="text-xs text-slate-400">Clean, organized code that is easy to read and scale.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
 
         </main>
     </div>
