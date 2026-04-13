@@ -628,6 +628,125 @@
             </section>
 
 
+            <div class="module-divider"></div>
+
+
+            <!-- 05. Components -->
+            <section id="components" class="hook-section space-y-10">
+                <div class="flex items-center gap-6">
+                    <div class="px-5 py-2 rounded-2xl bg-amber-500 text-white font-black text-lg shadow-xl shadow-amber-200">05</div>
+                    <h2 class="text-4xl font-black text-slate-900 tracking-tight">Redux in Components</h2>
+                </div>
+
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="p-10 bg-white border-2 border-slate-100 rounded-[3rem] concept-card shadow-sm hover:border-amber-400/70 transition-all duration-300">
+                        <div class="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center text-amber-600 mb-6 font-black">1</div>
+                        <h4 class="text-xl font-bold mb-4">useSelector()</h4>
+                        <p class="text-sm text-slate-500 leading-relaxed mb-6 italic">Used to read data from the store. React will automatically re-render the component whenever the selected data changes.</p>
+                        
+                        <div class="bg-slate-900 p-4 rounded-2xl text-[11px] font-mono text-amber-200 code-font">
+                            <span class="text-slate-500">// Read state</span><br/>
+                            <span class="text-violet-400">const</span> name = <span class="text-white">useSelector</span>(state => state.user.name)
+                        </div>
+                    </div>
+
+                    <div class="p-10 bg-white border-2 border-slate-100 rounded-[3rem] concept-card shadow-sm hover:border-rose-400/70 transition-all duration-300">
+                        <div class="w-12 h-12 bg-rose-100 rounded-xl flex items-center justify-center text-rose-600 mb-6 font-black">2</div>
+                        <h4 class="text-xl font-bold mb-4">useDispatch()</h4>
+                        <p class="text-sm text-slate-500 leading-relaxed mb-6 italic">Used to trigger actions. It returns a function that you use to "dispatch" actions to the store.</p>
+                        
+                        <div class="bg-slate-900 p-4 rounded-2xl text-[11px] font-mono text-rose-200 code-font">
+                            <span class="text-slate-500">// Trigger update</span><br/>
+                            <span class="text-white">dispatch</span>(<span class="text-white">setName</span>(<span class="text-emerald-400">'Gemini'</span>))
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Summary -->
+                <div class="bg-slate-900 rounded-[3rem] p-12 text-white relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-64 h-64 bg-amber-500/10 rounded-full blur-3xl -mr-20 -mt-20"></div>
+
+                    <div class="relative z-10 space-y-8">
+                        <h3 class="text-2xl font-bold tracking-tight">Cheat Sheet: When to use what?</h3>
+
+
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                            <div class="space-y-2 border-r border-slate-700 pr-5">
+                                <p class="text-amber-400 text-[10px] font-black uppercase tracking-widest">Goal</p>
+                                <p class="text-xs font-medium">I need to show the user's name on a profile page.</p>
+                                <p class="text-xs text-slate-400">Use <span class="text-white font-bold">useSelector</span></p>
+                            </div>
+                            <div class="space-y-2 border-r border-slate-700 pr-5">
+                                <p class="text-rose-400 text-[10px] font-black uppercase tracking-widest">Goal</p>
+                                <p class="text-xs font-medium">I need to update the shopping cart when a button is clicked.</p>
+                                <p class="text-xs text-slate-400">Use <span class="text-white font-bold">useDispatch</span></p>
+                            </div>
+                            <div class="space-y-2 pr-5">
+                                <p class="text-emerald-400 text-[10px] font-black uppercase tracking-widest">Goal</p>
+                                <p class="text-xs font-medium">I need to reset everything when the user logs out.</p>
+                                <p class="text-xs text-slate-400">Use <span class="text-white font-bold">useDispatch</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <div class="module-divider"></div>
+
+
+            <!-- 06. Async Thunks -->
+            <section id="async-thunk" class="hook-section space-y-10">
+                <div class="flex items-center gap-6">
+                    <div class="px-5 py-2 rounded-2xl bg-rose-600 text-white font-black text-lg shadow-xl shadow-rose-200">06</div>
+                    <h2 class="text-4xl font-black text-slate-900 tracking-tight">Async Logic</h2>
+                </div>
+
+                <!-- cards -->
+                <div class="bg-slate-900 rounded-[3rem] p-12 text-white relative overflow-hidden">
+                    <div class="max-w-3xl relative z-10">
+                        <h3 class="text-2xl font-black mb-2 tracking-tight">Handling Side Effects with <span class="text-rose-400 italic">createAsyncThunk</span></h3>
+                        <p class="text-slate-400 leading-relaxed mb-7 text-sm">Reducers must be pure. To handle API calls, we use Thunks. A Thunk automatically generates three action types representing the lifecycle of the request.</p>
+                        
+
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            <div class="p-6 bg-slate-800/50 rounded-3xl border border-slate-700/50 hover:border-amber-500/60 transition-all duration-300">
+                                <div class="w-8 h-8 rounded-full bg-amber-500/20 text-amber-500 flex items-center justify-center mb-4 font-bold text-xs">01</div>
+                                <div class="text-lg font-bold mb-1">Pending</div>
+                                <p class="text-[11px] text-slate-500">Request started. Time to show a loading spinner.</p>
+                            </div>
+
+                            <div class="p-6 bg-slate-800/50 rounded-3xl border border-slate-700/50 hover:border-emerald-500/60 transition-all duration-300">
+                                <div class="w-8 h-8 rounded-full bg-emerald-500/20 text-emerald-500 flex items-center justify-center mb-4 font-bold text-xs">02</div>
+                                <div class="text-lg font-bold mb-1">Fulfilled</div>
+                                <p class="text-[11px] text-slate-500">Success! We received the data from the server.</p>
+                            </div>
+
+                            <div class="p-6 bg-slate-800/50 rounded-3xl border border-slate-700/50 hover:border-rose-500/60 transition-all duration-300">
+                                <div class="w-8 h-8 rounded-full bg-rose-500/20 text-rose-500 flex items-center justify-center mb-4 font-bold text-xs">03</div>
+                                <div class="text-lg font-bold mb-1">Rejected</div>
+                                <p class="text-[11px] text-slate-500">Error. Something went wrong with the network.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="absolute -bottom-24 -right-24 w-96 h-96 bg-rose-600/10 rounded-full blur-[100px]"></div>
+                </div>
+            </section>
+
+
+            <div class="module-divider"></div>
+
+
+            
+
+
+            
+            
+
+
+
 
 
 
