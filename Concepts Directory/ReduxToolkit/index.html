@@ -416,21 +416,155 @@
             <div class="module-divider"></div>
 
 
-
             <!-- 03. Logic Flow -->
             <section id="logic-flow" class="hook-section space-y-12">
-                <div class="flex items-center gap-6">
-                    <div
-                        class="px-5 py-2 rounded-2xl bg-violet-600 text-white font-black text-lg shadow-xl shadow-violet-200">
-                        03</div>
-                    <div class="space-y-1">
-                        <h2 class="text-4xl font-black tracking-tight">The Data Cycle</h2>
-                        <p class="text-sm text-slate-400 font-medium">How information moves through your app.</p>
+                <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+                    <div class="flex items-center gap-6">
+                        <div
+                            class="px-5 py-2 rounded-2xl bg-violet-600 text-white font-black text-lg shadow-xl shadow-violet-200">
+                            03</div>
+                        <div class="space-y-1">
+                            <h2 class="text-4xl font-black tracking-tight">The Data Cycle</h2>
+                            <p class="text-sm text-slate-400 font-medium">How data moves through your application in 3
+                                steps.</p>
+                        </div>
+                    </div>
+                    <div class="bg-amber-50 border border-amber-100 px-4 py-2 rounded-xl flex items-center gap-3">
+                        <span class="text-xl">🍕</span>
+                        <p class="text-[11px] font-bold text-amber-700 uppercase tracking-wider">The Restaurant Analogy
+                        </p>
                     </div>
                 </div>
 
 
+                <div class="relative bg-white border border-slate-200 rounded-[3rem] p-8 md:px-10 md:py-12 shadow-2xl shadow-slate-200/50">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 relative z-10">
+
+                        <!-- Step 1: Dispatching -->
+                        <div class="step-card space-y-6">
+                            <div class="flex items-center gap-4">
+                                <div
+                                    class="w-12 h-12 bg-violet-600 rounded-xl flex items-center justify-center text-white shadow-lg shadow-violet-200">
+                                    <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                            d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                    </svg>
+                                </div>
+                                <span
+                                    class="text-xs font-black text-slate-400 uppercase tracking-widest text-center">Trigger
+                                    Event</span>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold mb-2">1. Dispatching</h4>
+                                <div class="text-[12px] text-slate-500 leading-relaxed space-y-3 mb-4">
+                                    <p><strong>Use Case:</strong> Used whenever a user does something—clicks a button,
+                                        submits a form, or deletes an item.</p>
+                                    <p>It's like telling a waiter: <span class="font-semibold text-slate-900">"Take this
+                                            request to the kitchen."</span></p>
+                                </div>
+                                <div class="bg-slate-900 rounded-2xl p-4 border border-slate-800 shadow-inner">
+                                    <p class="text-[10px] text-slate-500 font-bold uppercase mb-2 tracking-widest">In
+                                        your Component:</p>
+                                    <code class="text-[11px] text-violet-300 code-font block">
+                                    dispatch(addItem("Pizza"))
+                                </code>
+                                </div>
+                            </div>
+                            <div class="flow-line hidden md:block">
+                                <div class="flow-progress"></div>
+                            </div>
+                        </div>
+
+                        <!-- Step 2: Reducer -->
+                        <div class="step-card space-y-6">
+                            <div class="flex items-center gap-4">
+                                <div
+                                    class="w-12 h-12 bg-purple-600 rounded-xl flex items-center justify-center text-white shadow-lg shadow-purple-200">
+                                    <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                            d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                                    </svg>
+                                </div>
+                                <span class="text-xs font-black text-slate-400 uppercase tracking-widest">Process Data</span>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold mb-2">2. Reducer</h4>
+                                <div class="text-[12px] text-slate-500 leading-relaxed space-y-3 mb-4">
+                                    <p><strong>Use Case:</strong> Used to define <i>how</i> the state changes. It
+                                        calculates the new data based on the action received.</p>
+                                    <p>The Reducer is the <strong>Chef</strong>. It's the only one allowed to modify the
+                                        store.</p>
+                                </div>
+                                <div class="bg-slate-900 rounded-2xl p-4 border border-slate-800 shadow-inner">
+                                    <p class="text-[10px] text-slate-500 font-bold uppercase mb-2 tracking-widest">In
+                                        your Slice:</p>
+                                    <code class="text-[11px] text-purple-300 code-font block leading-relaxed">
+                                    addItem: (state, action) => {<br/>
+                                    &nbsp;&nbsp;state.items.push(action.payload)<br/>
+                                    }
+                                </code>
+                                </div>
+                            </div>
+                            <div class="flow-line hidden md:block">
+                                <div class="flow-progress" style="animation-delay: 1.5s;"></div>
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Selector -->
+                        <div class="step-card space-y-6">
+                            <div class="flex items-center gap-4">
+                                <div
+                                    class="w-12 h-12 bg-indigo-600 rounded-xl flex items-center justify-center text-white shadow-lg shadow-indigo-200">
+                                    <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                            d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                            d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                                    </svg>
+                                </div>
+                                <span class="text-xs font-black text-slate-400 uppercase tracking-widest">Update UI</span>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold mb-2">3. Selector</h4>
+                                <div class="text-[12px] text-slate-500 leading-relaxed space-y-3 mb-4">
+                                    <p><strong>Use Case:</strong> Used to pull specific data into a component and keep
+                                        it in sync with the global store.</p>
+                                    <p>As soon as the Chef adds the Pizza, the UI <strong>automatically
+                                            rerenders</strong> to show it.</p>
+                                </div>
+                                <div class="bg-slate-900 rounded-2xl p-4 border border-slate-800 shadow-inner">
+                                    <p class="text-[10px] text-slate-500 font-bold uppercase mb-2 tracking-widest">In
+                                        your Component:</p>
+                                    <code class="text-[11px] text-indigo-300 code-font block">
+                                    const items = useSelector(<br/>
+                                    &nbsp;&nbsp;state => state.cart.items<br/>
+                                    )
+                                </code>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Guidance Footer -->
+                    <div
+                        class="mt-12 p-8 bg-indigo-50/50 rounded-[2.5rem] border border-indigo-100 flex flex-col md:flex-row items-center gap-10">
+                        <div
+                            class="shrink-0 w-16 h-16 bg-white rounded-3xl flex items-center justify-center shadow-lg text-2xl">
+                            💡</div>
+                        <div class="space-y-2 text-center md:text-left">
+                            <p class="font-bold text-lg leading-tight">It's okay if this feels heavy right now!</p>
+                            <p class="text-[13px] text-slate-600 leading-relaxed">
+                                Theoretical Redux can be confusing to read. If you're struggling to visualize the flow,
+                                <span class="text-indigo-600 font-bold">keep going.</span> Everything will "click"
+                                instantly once we start writing the actual code in the real project.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </section>
+
+
 
 
 
