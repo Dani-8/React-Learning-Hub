@@ -425,13 +425,15 @@
                             03</div>
                         <div class="space-y-1">
                             <h2 class="text-4xl font-black tracking-tight">The Data Cycle</h2>
-                            <p class="text-sm text-slate-400 font-medium">How data moves through your application in 3 steps.</p>
+                            <p class="text-sm text-slate-400 font-medium">How data moves through your application in 3
+                                steps.</p>
                         </div>
                     </div>
                 </div>
 
 
-                <div class="relative bg-white border border-slate-200 rounded-[3rem] p-8 md:px-10 md:py-12 shadow-2xl shadow-slate-200/50">
+                <div
+                    class="relative bg-white border border-slate-200 rounded-[3rem] p-8 md:px-10 md:py-12 shadow-2xl shadow-slate-200/50">
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-10 relative z-10">
 
                         <!-- Step 1: Dispatching -->
@@ -479,7 +481,8 @@
                                             d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
                                     </svg>
                                 </div>
-                                <span class="text-xs font-black text-slate-400 uppercase tracking-widest">Process Data</span>
+                                <span class="text-xs font-black text-slate-400 uppercase tracking-widest">Process
+                                    Data</span>
                             </div>
                             <div>
                                 <h4 class="text-lg font-bold mb-2">2. Reducer</h4>
@@ -516,7 +519,8 @@
                                             d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                                     </svg>
                                 </div>
-                                <span class="text-xs font-black text-slate-400 uppercase tracking-widest">Update UI</span>
+                                <span class="text-xs font-black text-slate-400 uppercase tracking-widest">Update
+                                    UI</span>
                             </div>
                             <div>
                                 <h4 class="text-lg font-bold mb-2">3. Selector</h4>
@@ -562,7 +566,66 @@
             <div class="module-divider"></div>
 
 
+            <!-- 04. Slices -->
+            <section id="slices" class="hook-section space-y-10">
+                <div class="flex items-center gap-6">
+                    <div
+                        class="px-5 py-2 rounded-2xl bg-emerald-600 text-white font-black text-lg shadow-xl shadow-emerald-200">
+                        04</div>
+                    <h2 class="text-4xl font-black text-slate-900 tracking-tight">Slices & Immer</h2>
+                </div>
 
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div class="space-y-6">
+                        <div class="p-8 bg-white border border-slate-100 rounded-[2.5rem] shadow-sm hover:border-emerald-400/70 transition-all duration-300">
+                            <h4 class="font-bold text-slate-900 mb-2 text-lg">What is a Slice?</h4>
+                            <p class="text-[12px] text-slate-500 leading-relaxed">
+                                A slice is a bundle of Redux logic for a single feature (like "auth" or "cart"). It
+                                contains the <b>initial state</b>, <b>reducers</b>, and <b>actions</b> in one place,
+                                making your code modular and easy to manage.
+                            </p>
+                        </div>
+
+                        <div class="p-8 bg-emerald-50 border border-emerald-100 rounded-[2.5rem] shadow-sm hover:border-emerald-400/70 transition-all duration-300">
+                            <h4 class="font-bold text-emerald-900 mb-2 text-lg">Mutable Syntax (Immer)</h4>
+                            <p class="text-[12px] text-emerald-800 leading-relaxed">
+                                Inside <code class="font-bold bg-emerald-100 px-1 rounded">createSlice</code>, you can
+                                write <code class="font-bold text-emerald-600">state.value += 1</code>. RTK uses the
+                                Immer library to ensure this is converted into a safe, immutable update automatically.
+                                No more spread operators <code class="text-emerald-700 font-mono">...state</code>
+                                everywhere!
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="bg-slate-900 rounded-[2.5rem] shadow-lg shadow-slate-300/50">
+                        <div class="flex items-center gap-1.5 px-6 py-3 border-b border-slate-600">
+                            <div class="w-2.5 h-2.5 rounded-full bg-rose-500"></div>
+                            <div class="w-2.5 h-2.5 rounded-full bg-amber-500"></div>
+                            <div class="w-2.5 h-2.5 rounded-full bg-emerald-500"></div>
+                        </div>
+
+                        <div class="px-5 py-3">
+                            <pre class="text-[13px] font-mono text-emerald-300">
+<span class="text-violet-400">const</span> userSlice = <span class="text-white">createSlice</span>({
+  name: <span class="text-emerald-400">'user'</span>,
+  initialState: { name: <span class="text-emerald-400">''</span> },
+  reducers: {
+    <span class="text-white">setName:</span> (state, action) => {
+      <span class="text-slate-500">// Direct mutation is allowed here!</span>
+      <span class="text-white">state.name = action.payload;</span>
+    }
+  }
+})
+
+<span class="text-slate-500">// Exporting for use in components</span>
+<span class="text-violet-400">export const</span> { setName } = userSlice.actions;
+<span class="text-violet-400">export default</span> userSlice.reducer;</pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
 
 
