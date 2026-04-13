@@ -67,6 +67,7 @@
                         </a>
                     </nav>
                 </div>
+
                 <div>
                     <h3 class="text-[11px] font-black text-slate-400 uppercase tracking-widest mb-4">02. Architecture
                     </h3>
@@ -83,7 +84,8 @@
                         </a>
                     </nav>
                 </div>
-                <!-- <div>
+
+                <div>
                     <h3 class="text-[11px] font-black text-slate-400 uppercase tracking-widest mb-4">03. Logic</h3>
                     <nav class="space-y-1">
                         <a href="#slices"
@@ -98,6 +100,7 @@
                         </a>
                     </nav>
                 </div>
+
                 <div>
                     <h3 class="text-[11px] font-black text-slate-400 uppercase tracking-widest mb-4">04. Async</h3>
                     <nav class="space-y-1">
@@ -112,7 +115,7 @@
                             Extra Reducers
                         </a>
                     </nav>
-                </div> -->
+                </div>
             </div>
         </aside>
 
@@ -265,10 +268,8 @@
             <!-- 01. Installation -->
             <section id="install" class="hook-section space-y-10">
                 <div class="flex items-center gap-6">
-                    <div
-                        class="px-5 py-2 rounded-2xl bg-slate-200 text-slate-900 font-black text-lg shadow-xl shadow-slate-300">
-                        01</div>
-                    <h2 class="text-4xl font-black text-slate-900">Get the SDK</h2>
+                    <div class="px-5 py-2 rounded-2xl bg-slate-200 text-slate-700 font-black text-lg shadow-xl shadow-slate-300">01</div>
+                    <h2 class="text-4xl font-black text-slate-700">Get the SDK</h2>
                 </div>
 
                 <div
@@ -739,19 +740,134 @@
             <div class="module-divider"></div>
 
 
+            <!-- 07. Extra Reducers -->
+            <section id="extra-reducers" class="hook-section space-y-10">
+                <div class="flex items-center gap-6">
+                    <div class="px-5 py-2 rounded-2xl bg-indigo-600 text-white font-black text-lg shadow-xl shadow-indigo-100">07</div>
+                    <h2 class="text-4xl font-black text-slate-900 tracking-tight">Extra Reducers</h2>
+                </div>
+
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                    <!-- Left: Theory -->
+                    <div class="lg:col-span-5 space-y-6">
+                        <div class="bg-white border border-slate-200 rounded-[2rem] p-10 shadow-sm relative overflow-hidden">
+                            <div class="relative z-10">
+                                <h4 class="text-xs font-black text-indigo-600 uppercase tracking-[0.2em] mb-4">The Logic Bridge</h4>
+                                <h3 class="text-2xl font-bold mb-1 italic text-slate-900">The Builder Pattern</h3>
+                                <p class="text-sm text-slate-500 leading-relaxed mb-6">
+                                    <code class="font-bold text-slate-800">extraReducers</code> allow your slice to respond to actions defined <b>outside</b> of itself—most commonly <span class="text-indigo-600 font-bold">Async Thunks</span>.
+                                </p>
+                                
+                                <div class="space-y-3">
+                                    <div class="flex items-center gap-4 p-4 bg-slate-50 rounded-2xl border border-slate-100 hover:border-indigo-500/70 transition-all duration-300">
+                                        <div class="w-2 h-2 rounded-full bg-indigo-500"></div>
+                                        <span class="text-xs font-bold text-slate-700">Centralized external logic</span>
+                                    </div>
+                                    <div class="flex items-center gap-4 p-4 bg-slate-50 rounded-2xl border border-slate-100 hover:border-indigo-500/70 transition-all duration-300">
+                                        <div class="w-2 h-2 rounded-full bg-indigo-500"></div>
+                                        <span class="text-xs font-bold text-slate-700">Chainable builder cases</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="p-8 bg-slate-800 rounded-[2rem] text-white shadow-2xl shadow-indigo-200">
+                            <p class="text-[12px] font-black uppercase tracking-widest text-indigo-500 mb-2">Pro Tip</p>
+                            <p class="text-xs leading-relaxed font-medium">
+                                Use the <code class="text-indigo-300">builder</code> object. It ensures that your cases are type-safe and prevents accidental state mutations.
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <!-- Right: Code -->
+                    <div class="lg:col-span-7">
+                        <div class="bg-slate-900 rounded-[2rem] overflow-hidden border border-slate-800 shadow-2xl h-full flex flex-col">
+                            <div class="px-5 py-2 bg-slate-800/50 border-b border-slate-700 flex justify-between items-center">
+                                <div class="flex gap-1">
+                                    <div class="w-2 h-2 rounded-full bg-[#ff5f56]"></div>
+                                    <div class="w-2 h-2 rounded-full bg-[#ffbd2e]"></div>
+                                    <div class="w-2 h-2 rounded-full bg-[#27c93f]"></div>
+                                </div>
+
+                                <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">userSlice.js</span>
+                            </div>
+
+
+                            <div class="p-5 flex-1 overflow-x-auto bg-slate-900">
+                                <pre class="text-[13px] leading-relaxed code-font whitespace-pre text-slate-300"><span class="text-purple-400">const</span> userSlice <span class="text-cyan-400">=</span> <span class="text-blue-400">createSlice</span>({
+    name<span class="text-cyan-400">:</span> <span class="text-green-400">'user'</span><span class="text-cyan-400">,</span>
+    initialState<span class="text-cyan-400">,</span>
+    <span class="text-blue-400">extraReducers</span><span class="text-cyan-400">:</span> (builder) <span class="text-purple-400">=></span> {
+        builder
+        <span class="text-slate-500 italic">// Handle Pending state</span>
+        <span class="text-cyan-400">.</span><span class="text-blue-400">addCase</span>(fetchData<span class="text-cyan-400">.</span>pending<span class="text-cyan-400">,</span> (state) <span class="text-purple-400">=></span> {
+            state<span class="text-cyan-400">.</span>loading <span class="text-cyan-400">=</span> <span class="text-orange-400">true</span><span class="text-cyan-400">;</span>
+        })
+        <span class="text-slate-500 italic">// Handle Success state</span>
+        <span class="text-cyan-400">.</span><span class="text-blue-400">addCase</span>(fetchData<span class="text-cyan-400">.</span>fulfilled<span class="text-cyan-400">,</span> (state<span class="text-cyan-400">,</span> action) <span class="text-purple-400">=></span> {
+            state<span class="text-cyan-400">.</span>loading <span class="text-cyan-400">=</span> <span class="text-orange-400">false</span><span class="text-cyan-400">;</span>
+            state<span class="text-cyan-400">.</span>data <span class="text-cyan-400">=</span> action<span class="text-cyan-400">.</span>payload<span class="text-cyan-400">;</span>
+        })<span class="text-cyan-400">;</span>
+    }
+})<span class="text-cyan-400">;</span></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
             
-
-
-            
-            
-
-
-
-
-
-
         </main>
     </div>
+
+
+
+    <!-- ======================================================= -->
+
+
+
+    <footer class="mt-32 relative overflow-hidden bg-slate-100/50 border-t border-slate-300 py-20 rounded-[4rem]">
+        <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+            <div class="inline-flex items-center gap-3 px-5 py-2 bg-white rounded-full mb-10 border border-slate-300/60 shadow-sm">
+                <div class="w-6 h-6 bg-violet-600 rounded-full flex items-center justify-center text-white text-xs">✓</div>
+                <span class="text-[11px] font-bold uppercase tracking-[0.15em] text-slate-600">Module 05: Global State Complete</span>
+            </div>
+
+            <div class="max-w-2xl mx-auto space-y-4 mb-14">
+                <h2 class="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.1]">
+                    Brain Synced.
+                    <span class="text-violet-600 italic">Redux Journey Complete.</span>
+                </h2>
+
+                <p class="text-slate-500 font-medium md:text-md">
+                    Global state management is now under your control. You've centralized the data flow and optimized the performance of your entire application.
+                </p>
+            </div>
+
+            
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-5">
+                <!-- <a href="#"
+                    class="group w-full sm:w-auto px-8 py-4 bg-slate-900 text-white rounded-2xl font-bold text-sm transition-all duration-300 hover:bg-violet-600 hover:shadow-2xl hover:shadow-violet-200 hover:-translate-y-1 flex items-center justify-center gap-3">
+                    <span>Next: </span>
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                            d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                </a> -->
+
+                <a href="../index.html"
+                    class="w-full sm:w-auto px-10 py-4 glass-ui text-slate-500 rounded-2xl border border-transparent font-bold text-sm transition-all duration-300 hover:bg-white hover:text-slate-900 hover:border-slate-300">
+                    Return to Hub
+                </a>
+            </div>
+        </div>
+    </footer>
+
+
+
 
 
 
