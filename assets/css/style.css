@@ -34,39 +34,6 @@ body {
 /* =============================================================== */
 /* =============================================================== */
 
-/* THEME TOGGLE BTN */
-.theme-toggle-btn {
-    position: fixed;
-    top: 2rem;
-    right: 2rem;
-    z-index: 100;
-    backdrop-filter: blur(8px);
-    padding: 12px;
-    outline: none;
-    border: 1px solid var(--border-color);
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.05);
-    color: rgb(228, 208, 32);
-    transition: 0.3s ease;
-}
-
-.theme-toggle-btn:hover {
-    background-color: rgba(255, 255, 255, 0.08);
-    transform: scale(1.08);
-}
-
-.theme-toggle-btn:active {
-    transform: scale(0.9);
-}
-
-.theme-toggle-btn svg {
-    width: 25px;
-    height: 25px;
-}
-
-/* =============================================================== */
-/* =============================================================== */
-
 /* MAIN CONTENT */
 
 .main {
