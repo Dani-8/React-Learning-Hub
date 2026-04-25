@@ -154,11 +154,11 @@ Scale your applications like the pros:
 - **Reference Back**: Bookmark specific sections for quick review later
 
 ### 🎓 Recommended Pace
-- **Phase 1**: 1-2 hours (Setup foundation)
-- **Phase 2**: 3-4 hours (Core concepts)
-- **Phase 3**: 5-6 hours (Master hooks)
-- **Phase 4**: 4-5 hours (Routing mastery)
-- **Phase 5**: 6-8 hours (State management)
+- **Phase 1**: 1---2 hours (Setup foundation)
+- **Phase 2**: 2---2.5 hours (Core concepts)
+- **Phase 3**: 3---3.5 hours (Master hooks)
+- **Phase 4**: 2---3.5 hours (Routing mastery)
+- **Phase 5**: 3.5---5 hours (State management)
 
 ---
 
